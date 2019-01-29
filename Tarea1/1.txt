@@ -1,0 +1,6 @@
+Explicación de lo que se está modelando y poner un ejemplo práctico para cada uno.
+Si consulta a alguien, se cita.
+
+Código Python para los grafos (cita de las bibliotecas)
+
+Una figura para cada cosa.

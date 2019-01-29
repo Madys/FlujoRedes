@@ -1,0 +1,16 @@
+emacs = editor
+
+ejecutar un script de python: python3 nombre.py
+
+proceso de crear PDF:
+
+editar tex y bib con emacs
+ejecutar lo siguiente:
+
+latex prueba (checar que referencias y etiquetas hay)
+bibtex prueba (sacar datos de referencias)
+latex prueba (incorporar las referencias)
+latex prueba (asignar numeros a referencias)
+dvips prueba (crea un documento)
+open prueba.ps (te lo muestra)
+
