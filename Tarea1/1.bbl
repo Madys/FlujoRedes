@@ -1,0 +1,25 @@
+\begin{thebibliography}{1}
+
+\bibitem{ahuja2017network}
+Ravindra~K Ahuja.
+\newblock {\em Network flows: theory, algorithms, and applications}.
+\newblock Pearson Education, 2017.
+
+\bibitem{chung2010graph}
+Fan Chung.
+\newblock Graph theory in the information age.
+\newblock {\em Notices of the AMS}, 57(6):726--732, 2010.
+
+\bibitem{gonzalez2016potencial}
+Natalia Gonz{\'a}lez-Cervantes, Aurora Espinoza-Valdez, and Ricardo
+  Salido-Ruiz.
+\newblock Potencial el{\'e}ctrico en el coraz{\'o}n: Representaci{\'o}n
+  mediante un grafo.
+\newblock {\em ReCIBE}, 5(3), 2016.
+
+\bibitem{amador}
+Amador Men\'endez~Vel\'azquez.
+\newblock Una breve introducci\'on a la teor\'ia de grafos.
+\newblock {\em Suma}, 28:11--26, 1998.
+
+\end{thebibliography}
