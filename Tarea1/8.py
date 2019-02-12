@@ -1,15 +1,12 @@
 # -*- coding: utf-8 -*-
 """
 Created on Mon Feb 11 12:26:08 2019
-
 @author: Madys
 """
-
 import matplotlib.pyplot as plot
 import networkx as nx
 
 G  =  nx . MultiGraph ()
-
 
 G.add_edge(1,2, weight=3)
 G.add_edge(1,2, weight=5)
@@ -49,15 +46,9 @@ edge_color='r')
 labels = {}
 labels[1] = r'$Presa$'
 
-
-
 nx.draw_networkx_labels(G, pos, labels, font_size=12)
-
-
-
 
 plot.xlim(20,800)
 plot.axis('off')
 plot.savefig("8.eps")
-
 plot.show()

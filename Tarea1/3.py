@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Mon Feb 11 15:37:20 2019
-
 @author: Madys
 """
 
@@ -9,7 +8,6 @@ import matplotlib.pyplot as plot
 import networkx as nx
 
 G  =  nx . Graph ()
-
 
 G.add_edge(1,2)
 G.add_edge(3,4)
@@ -23,7 +21,6 @@ nx.draw_networkx_nodes(G, pos,nodelist=apareados,node_size=400, node_color='r', 
 nx.draw_networkx_nodes(G, pos,nodelist=noApareado, node_size=400, node_color='y', node_shape='o')
 nx.draw_networkx_edges(G, pos,width=1, alpha=0.8, edge_color='black')
 
-
 labels = {}
 labels[1] = r'Boxer'
 labels[2] = r'Bulldog'
@@ -36,5 +33,4 @@ nx.draw_networkx_labels(G, pos, labels, font_size=12)
 plot.xlim(20,730)
 plot.axis('off')
 plot.savefig("3.eps")
-
 plot.show()

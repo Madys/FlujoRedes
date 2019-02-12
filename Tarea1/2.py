@@ -1,8 +1,13 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Feb 11 14:15:32 2019
+@author: Madys
+
+"""
 import matplotlib.pyplot as plot
 import networkx as nx
 
 G  =  nx . Graph ()
-
 pos = {1:(300, 200), 2:(150,100), 3:(250, 300), 4:(350,300), 5:(450,200), 6:(150,200),7:(370,200),8:(350,100)}
 
 G.add_edge(1,2)
@@ -33,5 +38,4 @@ nx.draw_networkx_labels(G, pos, labels, font_size=12)
 plot.xlim(0,500)
 plot.axis('off')
 plot.savefig("2.eps")
-
 plot.show()

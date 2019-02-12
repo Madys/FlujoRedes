@@ -1,3 +1,9 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Feb 11 14:15:32 2019
+@author: Madys
+"""
+
 import matplotlib.pyplot as plot
 import networkx as nx
 
@@ -37,5 +43,4 @@ nx.draw_networkx_labels(G, pos, labels, font_size=12)
 plot.xlim(50,500)
 plot.axis('off')
 plot.savefig("4.eps")
-
 plot.show()

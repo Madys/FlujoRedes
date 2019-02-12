@@ -1,8 +1,13 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Feb 11 14:15:32 2019
+@author: Madys
+"""
+
 import matplotlib.pyplot as plot
 import networkx as nx
 
 G  =  nx . DiGraph ()
-
 
 G.add_edge(1,2)
 G.add_edge(1,3)
@@ -12,7 +17,6 @@ G.add_edge(3,5)
 G.add_edge(4,5)
 node1 = {1,2}
 node2 = {3,4,5}
-
 
 pos = {1:(200, 350), 2:(550,350), 3:(650, 220), 4:(400,100), 5:(150,220)}
 
@@ -27,11 +31,8 @@ labels[3] = r'Emily'
 labels[4] = r'Laura'
 labels[5] = r'Oliver'
 
-
-
 nx.draw_networkx_labels(G, pos, labels, font_size=12)
 plot.xlim(20,1000)
 plot.axis('off')
 plot.savefig("6.eps")
-
 plot.show()

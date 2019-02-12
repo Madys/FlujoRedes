@@ -1,8 +1,13 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Feb 11 14:15:32 2019
+@author: Madys
+"""
+
 import matplotlib.pyplot as plot
 import networkx as nx
 
 G  =  nx . Graph ()
-
 
 G.add_node(1)
 G.add_node(2)
@@ -39,5 +44,4 @@ nx.draw_networkx_labels(G, pos, labels, font_size=8)
 plot.xlim(0,600)
 plot.axis('off')
 plot.savefig("1.eps")
-
 plot.show()

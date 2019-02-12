@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.1.28)  11 FEB 2019 19:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.1.28)  11 FEB 2019 22:09
 entering extended mode
 **./1.tex
 (1.tex
@@ -232,22 +232,10 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 40.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 40.
+ [1
 
-
-Package natbib Warning: Citation `ahuja2017network' on page 1 undefined on inpu
-t line 46.
-
-
-Package natbib Warning: Citation `chung2010graph' on page 1 undefined on input 
-line 50.
-
-
-Package natbib Warning: Citation `amador' on page 1 undefined on input line 52.
-
-
-[1
-
-{C:/Users/Madys/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (1.py
+{C:/Users/Madys/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+(1.py
 
 ! Package inputenc Error: Invalid UTF-8 byte sequence.
 
@@ -255,7 +243,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.31 labels[3] = r'San Nicolás'
+l.36 labels[3] = r'San Nicolás'
                                 
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -263,6 +251,7 @@ or specify an encoding such as \usepackage [latin1]{inputenc}
 in the document preamble.
 Alternatively, save the file in UTF-8 using your editor or another tool
 
+[2]
 
 ! Package inputenc Error: Invalid UTF-8 byte sequence.
 
@@ -270,7 +259,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.32 labels[4] = r'Anáhuac'
+l.37 labels[4] = r'Anáhuac'
                             
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -285,7 +274,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.34 labels[6] = r'Niños 
+l.39 labels[6] = r'Niños 
                           Héroes'
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -300,7 +289,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.34 labels[6] = r'Niños Héroes'
+l.39 labels[6] = r'Niños Héroes'
                                   
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -308,12 +297,12 @@ or specify an encoding such as \usepackage [latin1]{inputenc}
 in the document preamble.
 Alternatively, save the file in UTF-8 using your editor or another tool
 
-[2])
+)
 Package epstopdf Info: Source file: <1.eps>
-(epstopdf)                    date: 2019-02-11 18:58:27
+(epstopdf)                    date: 2019-02-11 22:03:07
 (epstopdf)                    size: 18269 bytes
 (epstopdf)             Output file: <1-eps-converted-to.pdf>
-(epstopdf)                    date: 2019-02-11 19:05:57
+(epstopdf)                    date: 2019-02-11 22:03:29
 (epstopdf)                    size: 13907 bytes
 (epstopdf)             Command: <epstopdf --outfile=1-eps-converted-to.pdf 1.ep
 s>
@@ -323,17 +312,17 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./1-eps-converted-to.pdf): PDF inclusion: found 
 PDF version <1.7>, but at most version <1.5> allowed
-<1-eps-converted-to.pdf, id=14, 433.62pt x 289.08pt>
+<1-eps-converted-to.pdf, id=13, 433.62pt x 289.08pt>
 File: 1-eps-converted-to.pdf Graphic file (type pdf)
 <use 1-eps-converted-to.pdf>
 Package pdftex.def Info: 1-eps-converted-to.pdf  used on input line 63.
 (pdftex.def)             Requested size: 276.00105pt x 184.00926pt.
 (2.py [3 <./1-eps-converted-to.pdf>])
 Package epstopdf Info: Source file: <2.eps>
-(epstopdf)                    date: 2019-02-11 18:44:39
+(epstopdf)                    date: 2019-02-11 22:02:18
 (epstopdf)                    size: 13405 bytes
 (epstopdf)             Output file: <2-eps-converted-to.pdf>
-(epstopdf)                    date: 2019-02-11 19:05:58
+(epstopdf)                    date: 2019-02-11 22:03:30
 (epstopdf)                    size: 10300 bytes
 (epstopdf)             Command: <epstopdf --outfile=2-eps-converted-to.pdf 2.ep
 s>
@@ -343,14 +332,14 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./2-eps-converted-to.pdf): PDF inclusion: found 
 PDF version <1.7>, but at most version <1.5> allowed
-<2-eps-converted-to.pdf, id=51, 433.62pt x 289.08pt>
+<2-eps-converted-to.pdf, id=50, 433.62pt x 289.08pt>
 File: 2-eps-converted-to.pdf Graphic file (type pdf)
 <use 2-eps-converted-to.pdf>
 Package pdftex.def Info: 2-eps-converted-to.pdf  used on input line 76.
 (pdftex.def)             Requested size: 276.00105pt x 184.00926pt.
-(3.py [4] [5 <./2-eps-converted-to.pdf>])
+[4] (3.py [5 <./2-eps-converted-to.pdf>])
 Package epstopdf Info: Source file: <3.eps>
-(epstopdf)                    date: 2019-02-11 18:41:42
+(epstopdf)                    date: 2019-02-11 22:04:24
 (epstopdf)                    size: 13307 bytes
 (epstopdf)             Output file: <3-eps-converted-to.pdf>
 (epstopdf)                    date: 2019-02-11 19:05:58
@@ -358,19 +347,24 @@ Package epstopdf Info: Source file: <3.eps>
 (epstopdf)             Command: <epstopdf --outfile=3-eps-converted-to.pdf 3.ep
 s>
 (epstopdf)             \includegraphics on input line 89.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(epstopdf --outfile=3-eps-converted-to.pdf 3.eps)...executed (allowed)
+.
+
+Package epstopdf Info: Result file: <3-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-02-11 22:09:21
+(epstopdf)                    size: 9796 bytes.
 
 
 pdfTeX warning: pdflatex (file ./3-eps-converted-to.pdf): PDF inclusion: found 
 PDF version <1.7>, but at most version <1.5> allowed
-<3-eps-converted-to.pdf, id=82, 433.62pt x 289.08pt>
+<3-eps-converted-to.pdf, id=81, 433.62pt x 289.08pt>
 File: 3-eps-converted-to.pdf Graphic file (type pdf)
 <use 3-eps-converted-to.pdf>
 Package pdftex.def Info: 3-eps-converted-to.pdf  used on input line 89.
 (pdftex.def)             Requested size: 276.00105pt x 184.00926pt.
-(4.py [6 <./3-eps-converted-to.pdf>])
+[6 <./3-eps-converted-to.pdf>] (4.py [7])
 Package epstopdf Info: Source file: <4.eps>
-(epstopdf)                    date: 2019-02-11 18:45:18
+(epstopdf)                    date: 2019-02-11 22:04:52
 (epstopdf)                    size: 13231 bytes
 (epstopdf)             Output file: <4-eps-converted-to.pdf>
 (epstopdf)                    date: 2019-02-11 19:05:59
@@ -378,19 +372,24 @@ Package epstopdf Info: Source file: <4.eps>
 (epstopdf)             Command: <epstopdf --outfile=4-eps-converted-to.pdf 4.ep
 s>
 (epstopdf)             \includegraphics on input line 99.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(epstopdf --outfile=4-eps-converted-to.pdf 4.eps)...executed (allowed)
+.
+
+Package epstopdf Info: Result file: <4-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-02-11 22:09:22
+(epstopdf)                    size: 10293 bytes.
 
 
 pdfTeX warning: pdflatex (file ./4-eps-converted-to.pdf): PDF inclusion: found 
 PDF version <1.7>, but at most version <1.5> allowed
-<4-eps-converted-to.pdf, id=108, 433.62pt x 289.08pt>
+<4-eps-converted-to.pdf, id=111, 433.62pt x 289.08pt>
 File: 4-eps-converted-to.pdf Graphic file (type pdf)
 <use 4-eps-converted-to.pdf>
 Package pdftex.def Info: 4-eps-converted-to.pdf  used on input line 99.
 (pdftex.def)             Requested size: 276.00105pt x 184.00926pt.
-[7] (5.py [8 <./4-eps-converted-to.pdf>])
+(5.py [8 <./4-eps-converted-to.pdf>])
 Package epstopdf Info: Source file: <5.eps>
-(epstopdf)                    date: 2019-02-11 18:46:54
+(epstopdf)                    date: 2019-02-11 22:05:35
 (epstopdf)                    size: 5123 bytes
 (epstopdf)             Output file: <5-eps-converted-to.pdf>
 (epstopdf)                    date: 2019-02-11 19:06:00
@@ -398,22 +397,27 @@ Package epstopdf Info: Source file: <5.eps>
 (epstopdf)             Command: <epstopdf --outfile=5-eps-converted-to.pdf 5.ep
 s>
 (epstopdf)             \includegraphics on input line 110.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(epstopdf --outfile=5-eps-converted-to.pdf 5.eps)...executed (allowed)
+.
+
+Package epstopdf Info: Result file: <5-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-02-11 22:09:23
+(epstopdf)                    size: 4039 bytes.
 
 
 pdfTeX warning: pdflatex (file ./5-eps-converted-to.pdf): PDF inclusion: found 
 PDF version <1.7>, but at most version <1.5> allowed
-<5-eps-converted-to.pdf, id=140, 433.62pt x 289.08pt>
+<5-eps-converted-to.pdf, id=139, 433.62pt x 289.08pt>
 File: 5-eps-converted-to.pdf Graphic file (type pdf)
 <use 5-eps-converted-to.pdf>
 Package pdftex.def Info: 5-eps-converted-to.pdf  used on input line 110.
 (pdftex.def)             Requested size: 276.00105pt x 184.00926pt.
 [9 <./5-eps-converted-to.pdf>] (6.py [10])
 Package epstopdf Info: Source file: <6.eps>
-(epstopdf)                    date: 2019-02-11 18:41:14
+(epstopdf)                    date: 2019-02-11 22:02:31
 (epstopdf)                    size: 12253 bytes
 (epstopdf)             Output file: <6-eps-converted-to.pdf>
-(epstopdf)                    date: 2019-02-11 19:06:01
+(epstopdf)                    date: 2019-02-11 22:03:31
 (epstopdf)                    size: 8846 bytes
 (epstopdf)             Command: <epstopdf --outfile=6-eps-converted-to.pdf 6.ep
 s>
@@ -423,7 +427,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./6-eps-converted-to.pdf): PDF inclusion: found 
 PDF version <1.7>, but at most version <1.5> allowed
-<6-eps-converted-to.pdf, id=149, 433.62pt x 289.08pt>
+<6-eps-converted-to.pdf, id=148, 433.62pt x 289.08pt>
 File: 6-eps-converted-to.pdf Graphic file (type pdf)
 <use 6-eps-converted-to.pdf>
 Package pdftex.def Info: 6-eps-converted-to.pdf  used on input line 127.
@@ -436,7 +440,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.32 labels[5] = r'Caballería'
+l.38 labels[5] = r'Caballería'
                                
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -451,7 +455,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.33 labels[6] = r'Caballería'
+l.39 labels[6] = r'Caballería'
                                
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -466,7 +470,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.34 labels[7] = r'Holguín'
+l.40 labels[7] = r'Holguín'
                             
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -483,36 +487,41 @@ Package epstopdf Info: Source file: <7.eps>
 (epstopdf)                    size: 10253 bytes
 (epstopdf)             Command: <epstopdf --outfile=7-eps-converted-to.pdf 7.ep
 s>
-(epstopdf)             \includegraphics on input line 138.
+(epstopdf)             \includegraphics on input line 140.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./7-eps-converted-to.pdf): PDF inclusion: found 
 PDF version <1.7>, but at most version <1.5> allowed
-<7-eps-converted-to.pdf, id=174, 433.62pt x 289.08pt>
+<7-eps-converted-to.pdf, id=173, 433.62pt x 289.08pt>
 File: 7-eps-converted-to.pdf Graphic file (type pdf)
 <use 7-eps-converted-to.pdf>
-Package pdftex.def Info: 7-eps-converted-to.pdf  used on input line 138.
+Package pdftex.def Info: 7-eps-converted-to.pdf  used on input line 140.
 (pdftex.def)             Requested size: 276.00105pt x 184.00926pt.
 [12] (8.py [13 <./7-eps-converted-to.pdf>])
 Package epstopdf Info: Source file: <8.eps>
-(epstopdf)                    date: 2019-02-11 16:39:49
+(epstopdf)                    date: 2019-02-11 22:07:00
 (epstopdf)                    size: 8345 bytes
 (epstopdf)             Output file: <8-eps-converted-to.pdf>
 (epstopdf)                    date: 2019-02-11 17:28:22
 (epstopdf)                    size: 6337 bytes
 (epstopdf)             Command: <epstopdf --outfile=8-eps-converted-to.pdf 8.ep
 s>
-(epstopdf)             \includegraphics on input line 151.
-Package epstopdf Info: Output file is already uptodate.
+(epstopdf)             \includegraphics on input line 153.
+runsystem(epstopdf --outfile=8-eps-converted-to.pdf 8.eps)...executed (allowed)
+.
+
+Package epstopdf Info: Result file: <8-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-02-11 22:09:24
+(epstopdf)                    size: 6337 bytes.
 
 
 pdfTeX warning: pdflatex (file ./8-eps-converted-to.pdf): PDF inclusion: found 
 PDF version <1.7>, but at most version <1.5> allowed
-<8-eps-converted-to.pdf, id=204, 433.62pt x 289.08pt>
+<8-eps-converted-to.pdf, id=203, 433.62pt x 289.08pt>
 File: 8-eps-converted-to.pdf Graphic file (type pdf)
 <use 8-eps-converted-to.pdf>
-Package pdftex.def Info: 8-eps-converted-to.pdf  used on input line 151.
+Package pdftex.def Info: 8-eps-converted-to.pdf  used on input line 153.
 (pdftex.def)             Requested size: 276.00105pt x 184.00926pt.
 [14] (9.py [15 <./8-eps-converted-to.pdf>]
 
@@ -522,7 +531,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.36 labels[1] = r'Automática'
+l.30 labels[1] = r'Automática'
                                
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -537,7 +546,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.37 labels[2] = r'Eléctrica'
+l.31 labels[2] = r'Eléctrica'
                               
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -552,7 +561,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.38 labels[3] = r'Física'
+l.32 labels[3] = r'Física'
                            
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -567,7 +576,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.39 labels[4] = r'Informática'
+l.33 labels[4] = r'Informática'
                                 
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -582,7 +591,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.40 labels[5] = r'Cibernética'
+l.34 labels[5] = r'Cibernética'
                                 
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -592,108 +601,118 @@ Alternatively, save the file in UTF-8 using your editor or another tool
 
 )
 Package epstopdf Info: Source file: <8.eps>
-(epstopdf)                    date: 2019-02-11 16:39:49
+(epstopdf)                    date: 2019-02-11 22:07:00
 (epstopdf)                    size: 8345 bytes
 (epstopdf)             Output file: <8-eps-converted-to.pdf>
-(epstopdf)                    date: 2019-02-11 17:28:22
+(epstopdf)                    date: 2019-02-11 22:09:24
 (epstopdf)                    size: 6337 bytes
 (epstopdf)             Command: <epstopdf --outfile=8-eps-converted-to.pdf 8.ep
 s>
-(epstopdf)             \includegraphics on input line 166.
+(epstopdf)             \includegraphics on input line 168.
 Package epstopdf Info: Output file is already uptodate.
 File: 8-eps-converted-to.pdf Graphic file (type pdf)
 <use 8-eps-converted-to.pdf>
-Package pdftex.def Info: 8-eps-converted-to.pdf  used on input line 166.
+Package pdftex.def Info: 8-eps-converted-to.pdf  used on input line 168.
 (pdftex.def)             Requested size: 276.00105pt x 184.00926pt.
- (10.py [16] [17])
+ [16] (10.py [17])
 Package epstopdf Info: Source file: <10.eps>
-(epstopdf)                    date: 2019-02-11 16:57:39
-(epstopdf)                    size: 14903 bytes
+(epstopdf)                    date: 2019-02-11 22:07:31
+(epstopdf)                    size: 13774 bytes
 (epstopdf)             Output file: <10-eps-converted-to.pdf>
-(epstopdf)                    date: 2019-02-11 17:28:23
-(epstopdf)                    size: 8623 bytes
+(epstopdf)                    date: 2019-02-11 22:03:32
+(epstopdf)                    size: 8116 bytes
 (epstopdf)             Command: <epstopdf --outfile=10-eps-converted-to.pdf 10.
 eps>
-(epstopdf)             \includegraphics on input line 178.
-Package epstopdf Info: Output file is already uptodate.
+(epstopdf)             \includegraphics on input line 180.
+runsystem(epstopdf --outfile=10-eps-converted-to.pdf 10.eps)...executed (allowe
+d).
+
+Package epstopdf Info: Result file: <10-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-02-11 22:09:25
+(epstopdf)                    size: 8116 bytes.
 
 
 pdfTeX warning: pdflatex (file ./10-eps-converted-to.pdf): PDF inclusion: found
  PDF version <1.7>, but at most version <1.5> allowed
-<10-eps-converted-to.pdf, id=226, 433.62pt x 289.08pt>
+<10-eps-converted-to.pdf, id=225, 433.62pt x 289.08pt>
 File: 10-eps-converted-to.pdf Graphic file (type pdf)
 <use 10-eps-converted-to.pdf>
-Package pdftex.def Info: 10-eps-converted-to.pdf  used on input line 178.
+Package pdftex.def Info: 10-eps-converted-to.pdf  used on input line 180.
 (pdftex.def)             Requested size: 276.00105pt x 184.00926pt.
-(11.py [18] [19 <./10-eps-converted-to.pdf>])
+[18 <./10-eps-converted-to.pdf>] (11.py [19])
 Package epstopdf Info: Source file: <11.eps>
-(epstopdf)                    date: 2019-02-11 18:54:50
+(epstopdf)                    date: 2019-02-11 22:08:16
 (epstopdf)                    size: 11180 bytes
 (epstopdf)             Output file: <11-eps-converted-to.pdf>
 (epstopdf)                    date: 2019-02-11 19:06:02
 (epstopdf)                    size: 7353 bytes
 (epstopdf)             Command: <epstopdf --outfile=11-eps-converted-to.pdf 11.
 eps>
-(epstopdf)             \includegraphics on input line 190.
-Package epstopdf Info: Output file is already uptodate.
+(epstopdf)             \includegraphics on input line 192.
+runsystem(epstopdf --outfile=11-eps-converted-to.pdf 11.eps)...executed (allowe
+d).
+
+Package epstopdf Info: Result file: <11-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-02-11 22:09:26
+(epstopdf)                    size: 7353 bytes.
 
 
 pdfTeX warning: pdflatex (file ./11-eps-converted-to.pdf): PDF inclusion: found
  PDF version <1.7>, but at most version <1.5> allowed
-<11-eps-converted-to.pdf, id=247, 433.62pt x 289.08pt>
+<11-eps-converted-to.pdf, id=246, 433.62pt x 289.08pt>
 File: 11-eps-converted-to.pdf Graphic file (type pdf)
 <use 11-eps-converted-to.pdf>
-Package pdftex.def Info: 11-eps-converted-to.pdf  used on input line 190.
+Package pdftex.def Info: 11-eps-converted-to.pdf  used on input line 192.
 (pdftex.def)             Requested size: 276.00105pt x 184.00926pt.
-
-Package natbib Warning: Citation `gonzalez2016potencial' on page 20 undefined o
-n input line 199.
-
-(12.py [20] [21 <./11-eps-converted-to.pdf>])
+(12.py [20 <./11-eps-converted-to.pdf>])
 Package epstopdf Info: Source file: <12.eps>
-(epstopdf)                    date: 2019-02-11 18:54:37
+(epstopdf)                    date: 2019-02-11 22:08:38
 (epstopdf)                    size: 10338 bytes
 (epstopdf)             Output file: <12-eps-converted-to.pdf>
 (epstopdf)                    date: 2019-02-11 19:06:03
 (epstopdf)                    size: 6772 bytes
 (epstopdf)             Command: <epstopdf --outfile=12-eps-converted-to.pdf 12.
 eps>
-(epstopdf)             \includegraphics on input line 206.
-Package epstopdf Info: Output file is already uptodate.
+(epstopdf)             \includegraphics on input line 209.
+runsystem(epstopdf --outfile=12-eps-converted-to.pdf 12.eps)...executed (allowe
+d).
+
+Package epstopdf Info: Result file: <12-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-02-11 22:09:26
+(epstopdf)                    size: 6772 bytes.
 
 
 pdfTeX warning: pdflatex (file ./12-eps-converted-to.pdf): PDF inclusion: found
  PDF version <1.7>, but at most version <1.5> allowed
-<12-eps-converted-to.pdf, id=266, 433.62pt x 289.08pt>
+<12-eps-converted-to.pdf, id=262, 433.62pt x 289.08pt>
 File: 12-eps-converted-to.pdf Graphic file (type pdf)
 <use 12-eps-converted-to.pdf>
-Package pdftex.def Info: 12-eps-converted-to.pdf  used on input line 206.
+Package pdftex.def Info: 12-eps-converted-to.pdf  used on input line 209.
 (pdftex.def)             Requested size: 276.00105pt x 184.00926pt.
-[22 <./12-eps-converted-to.pdf>]
-No file 1.bbl.
-
-Package natbib Warning: There were undefined citations.
-
-(1.aux
+[21] (1.bbl) [22 <./12-eps-converted-to.pdf>] (1.aux
 LaTeX Info: Redefining \. on input line 9.
 LaTeX Info: Redefining \% on input line 9.
-) ) 
+)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 4627 strings out of 492946
- 63728 string characters out of 3126266
- 341140 words of memory out of 3000000
- 8453 multiletter control sequences out of 15000+200000
- 8054 words of font info for 29 fonts, out of 3000000 for 9000
+ 4643 strings out of 492946
+ 64051 string characters out of 3126266
+ 345140 words of memory out of 3000000
+ 8467 multiletter control sequences out of 15000+200000
+ 8092 words of font info for 29 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,7n,40p,658b,1804s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/Madys/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmbx10.pfb><C:/Users/Madys/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmbx12.pfb><C:/Users/Madys/AppData/Local/Programs/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Madys/AppData/Local/Programs
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Madys/AppData/Lo
-cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Mady
-s/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on 1.pdf (22 pages, 194329 bytes).
+ 41i,7n,40p,634b,1804s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/Madys/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmbx12.pfb><C:/Users/Madys/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmr10.pfb><C:/Users/Madys/AppData/Local/Programs/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Madys/AppData/Local/Programs/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Madys/AppData/Loca
+l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Madys
+/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on 1.pdf (22 pages, 203388 bytes).
 PDF statistics:
  301 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
