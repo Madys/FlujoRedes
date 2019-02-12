@@ -26,14 +26,14 @@ nx.draw_networkx_nodes(G, pos, node_size=400, node_color='y', node_shape='o')
 nx.draw_networkx_edges(G, pos, width=1, alpha=0.8, edge_color='black')
 
 labels = {}
-labels[1] = r'$Sendero$'
-labels[2] = r'$Santiago Tapia$'
-labels[3] = r'$San Nicolás$'
-labels[4] = r'$Anáhuac$'
-labels[5] = r'$Universidad$'
-labels[6] = r'$Niños Héroes$'
-labels[7] = r'$Regina$'
-labels[8] = r'$General Anaya$'
+labels[1] = r'Sendero'
+labels[2] = r'Santiago Tapia'
+labels[3] = r'San Nicolás'
+labels[4] = r'Anáhuac'
+labels[5] = r'Universidad'
+labels[6] = r'Niños Héroes'
+labels[7] = r'Regina'
+labels[8] = r'General Anaya'
 
 nx.draw_networkx_labels(G, pos, labels, font_size=8)
 plot.xlim(0,600)

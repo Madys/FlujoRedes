@@ -1,30 +1,34 @@
 \documentclass{article}
-usepackage[utf8]{inputenc}
-
-\usepackage{graphicx, subcaption}
 \usepackage[spanish]{babel}
-%\usepackage{indentfirst} for APA margins and French indention
-\usepackage{url}
-%-------------------------------------------------------------------------------
-% Configuring customized document margins
-%-------------------------------------------------------------------------------
-\usepackage{geometry}
-addtolength{\oddsidemargin}{-.75in}
-addtolength{\evensidemargin}{-.75in}
-addtolength{\textwidth}{1.4in}
-
-\addtolength{\topmargin}{-0.25in}
-\addtolength{\textheight}{1.65in}
-
-%-------------------------------------------------------------------------------
-% Configuring colors to make Python codes easy readable
-%-------------------------------------------------------------------------------
+\usepackage{graphicx}
 \usepackage{listings}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3mm}
+\usepackage[numbers]{natbib}
 \usepackage{color}
-
-%-------------------------------------------------------------------------------
-% Title region
-%-------------------------------------------------------------------------------
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\lstset{
+  %%frame=tb,
+  numbers = left,
+  numberstyle=\tiny,
+  stepnumber=1,
+  language=python,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
 \title{
 Tarea 1: Representación de redes a través de la teoría de grafos
 }
@@ -32,7 +36,7 @@ Tarea 1: Representación de redes a través de la teoría de grafos
 \date{\today}
 
 \begin{document}
-\raggedright
+
 \maketitle
 
 \section*{Introducción}
@@ -76,8 +80,16 @@ Dentro de esta categoría se pueden encontrar: relaciones comerciales entre empr
 
 \section{Grafo simple no dirigido reflexivo}
 
+Un criador de perros posee 6 razas diferentes de estos animales. Con un grafo de este tipo puede representar de cuales de estos animales ha obtenido crías.
+En el grafo se puede observar que todas las razas excepto la Beagle, que es recién adquirida y aún no se ha reproducidos, ha tenido crías de su misma raza. También se observa que han habido cruzamientos entre bóxer y bulldog y entre pitbull y rottweiler.
 
+\lstinputlisting[language=Python, caption=Estado de cría de razas de perro.]{3.py}
 
+\begin{figure}
+  \includegraphics[width=.8\columnwidth]{3.eps}
+  \caption{Estado de cría de razas de perro}
+  \label{fig:3}
+\end{figure}
 \section{Grafo simple dirigido acíclico}
 
 La cadena de propagación de las ITS (Infecciones de Transmisión Sexual) para las cuales no se conoce cura o las que solo afectan al individuo una vez en la vida, pueden representarse mediante grafos simples dirigidos acíclicos. En este caso, el portador cada sujeto es un vértice y la dirección de transmisión de la enfermedad, es representada en la arista, desde la presona portador hacia el sujeto sano que posteriormente se convierte en portador y contagia a otros sujetos sanos.
@@ -99,15 +111,16 @@ En ciudades con carreteras estrechas como Santiago de Cuba, en diferentes sector
   \caption{Carreteras de sentido único en Santiago de Cuba.}
   \label{fig:5}
 \end{figure}
-
+\newpage
 
 \section{Grafo simple dirigido reflexivo}
 
 Un grafo en el que cada vértice es una empresa de servicios y las aristas, cada una de las otras empresas a las que le presta servicios, puede representarse mediante un grafo dirigido reflexivo pues algunas de estas empresas se brindan servicio a ellas mismas. 
 
-Una una página web pequeña a la cual se accede a todos sus vínculos a través de un menú estático también se puede representar con este tipo de grafo. 
+Un sitio web pequeño, en el cual se accede a todas sus páginas a través de un menú estático también se puede representar con este tipo de grafo. 
 
-Otro ejemplo está dado por la representación de un grupo de personas conectadas a una red social y los perfiles de otras personas que tengan abiertos en el navegador en ese momento. Cada una de esas persona también pudiesen estar mirando su propio perfil. En la siguiente imagen puede apreciarse en color rojo que Mayra y Andrew tienen abiertos sus propios perfiles.
+Otro ejemplo está dado por la representación de un grupo de personas conectadas a una red social y los perfiles de otras personas que tengan abiertos en el navegador en ese momento. Cada una de esas persona también pudiesen estar mirando su propio
+perfil. En la siguiente imagen puede apreciarse en color rojo que Mayra y Andrew tienen abiertos sus propios perfiles.
 
 \lstinputlisting[language=Python, caption= Representación de carreteras de doble sentido en Santiago de Cuba.]{6.py}
 \begin{figure}
@@ -116,35 +129,71 @@ Otro ejemplo está dado por la representación de un grupo de personas conectada
   \label{fig:6}
 \end{figure}
 
-
-
-
 \section{Multigrafo no dirigido acíclico}
 
 La ruta entre Santiago de Cuba y Holguín puede representarse  como un multigrafo no dirigido cíclico. En un pueblo llamado Caballería la carretera principal se bifurca, pudiendo continuar por la ruta principal hasta Banes, o por el camino alternativo de Caballería, que, aunque es más largo, puede recorrerse en menor tiempo a causa del poco tránsito.
 
-\lstinputlisting[language=Python, caption= Representación de carreteras de doble sentido en Santiago de Cuba.]{7.py}
+\lstinputlisting[language=Python, caption= Posible ruta entre Santiago de Cuba y Holguín.]{7.py}
 \begin{figure}
   \includegraphics[width=.8\columnwidth]{7.eps}
-  \caption{Red de carreteras de sentido único en Santiago de Cuba.}
+  \caption{Posible ruta entre Santiago de Cuba y Holguín}
   \label{fig:7}
 \end{figure}
 
 \section{Multigrafo no dirigido cíclico}
 
-En la presa del Cacao, ubicada en el Municipio Cotorro, Ciudad de La Habana, se realizó un proyecto para favorecer la agricultura. Al rededor de la presa se construyeron una serie de canales para mantener el suelo húmedo durante todo el año. Este sistema puede ser representado mediante el grafo mostrado a continuación, el cual los vértices representan la unión entre uno o más canales y las aristas, cada uno de los canales.
+En la presa del Cacao, ubicada en el Municipio Cotorro, Ciudad de La Habana, se realizó un proyecto para favorecer la agricultura. Al rededor de la presa se construyeron una serie de canales para mantener el suelo húmedo durante todo el año.
+Este sistema puede ser representado mediante el grafo mostrado a continuación, el cual los vértices representan la unión entre uno o más canales y las aristas, cada uno de los canales.
 
+
+\lstinputlisting[language=Python, caption= Representación de carreteras de doble sentido en Santiago de Cuba.]{8.py}
+\begin{figure}
+  \includegraphics[width=.8\columnwidth]{8.eps}
+  \caption{Red de carreteras de sentido único en Santiago de Cuba.}
+  \label{fig:8}
+\end{figure}
 
 \section{Multigrafo no dirigido reflexivo}
+
+En la Universidad de Oriente se quiere realizar un concurso de habilidades entre las carreras de Ingeniería en Electrónica, Ingeniería en Automática, Licenciatura en Física, Ingeniería en Informática y Licenciatura en Matemática-Cibernética. Las habilidades a evaluar serán matemática y programación. 
+
+El siguiente grafo muestra como está organizado el concurso. Cada vértice representa a los estudiantes que estudian una de las carreras y las aristas, con qué estudiantes pueden participar en cada habilidad, por eso los vértices aparecen en color rojo.
+
+Los vértices rojos unen a los que pueden concursar en entre sí en matemáticas y los azules, los que pueden concursar en programación.
+
+\lstinputlisting[language=Python, caption= Concurso de habilidades.]{9.py}
+\begin{figure}
+  \includegraphics[width=.8\columnwidth]{8.eps}
+  \caption{Concurso de habilidades.}
+  \label{fig:9}
+\end{figure}
 
 
 \section{Multigrafo dirigido acíclico}
 
 Estos grafos pueden utilizarse para representar la cuenca hidrográfica de un río en su flujo hacia el mar. Los vértices representan los puntos en los que al menos dos ramificaciones del delta confluyen o se separan.
 
+\lstinputlisting[language=Python, caption= Representación del delta de un río en su transcurso hacia el mar.]{10.py}
+\begin{figure}
+  \includegraphics[width=.8\columnwidth]{10.eps}
+  \caption{Representación del delta de un río en su transcurso hacia el mar.}
+  \label{fig:10}
+\end{figure}
+
 \section{multigrafo dirigido cíclico}
 
-Cuatro amigos desean salir de vacacione
+Este tipo de grafo es especialmente útil para representar viajes por lugares a los que se puede llegar mediante diferentes vías, regresando luego al punto de origen. Un ejemplo concreto de esto sería un recorrido vacacional por diferentes ciudades. Partiendo de la ciudad A, hay tres posibles vías  para llegar a la ciudad B, en bus, en auto de alquiler o en tren, cada uno de estos medios de transporte representaría una arista diferente para unir los vértices. De la ciudad B se quiere llegar a la ciudad C, a la que solo se puede llegar por barco o por avión, y así sucesivamente hasta completar el recorrido y regresar a casa. 
+
+
+\lstinputlisting[language=Python, caption= Representación de las posibles maneras de elegir la ruta de un circuito vacacional.]{11.py}
+\begin{figure}
+  \includegraphics[width=.8\columnwidth]{11.eps}
+  \caption{Representación de las posibles maneras de elegir la ruta de un circuito vacacional.}
+  \label{fig:11}
+\end{figure}
+
+
+
 
 \section{multigrafo dirigido reflexivo}
 González-Cervantes \cite{gonzalez2016potencial} empleó teoría de grafos para representar el potencial eléctrico en el corazón, demostrando se pueden incorporar las leyes fisiológicas involucradas. Cada uno de los vértices representa uno de los puntos principales que generan los impulsos eléctricos y que llevan la electricidad a

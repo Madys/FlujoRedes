@@ -24,14 +24,14 @@ nx.draw_networkx_nodes(G, pos, node_size=400, node_color='y', node_shape='o')
 nx.draw_networkx_edges(G, pos, width=1, alpha=0.8, edge_color='black')
 
 labels = {}
-labels[1] = r'$ Mario $'
-labels[2] = r'$Betty$'
-labels[3] = r'$Arturo$'
-labels[4] = r'$Carlos$'
-labels[5] = r'$Anna$'
-labels[6] = r'$Jane$'
-labels[7] = r'$Emily$'
-labels[8] = r'$Andrew$'
+labels[1] = r'Mario'
+labels[2] = r'Betty'
+labels[3] = r'Arturo'
+labels[4] = r'Carlos'
+labels[5] = r'Anna'
+labels[6] = r'Jane'
+labels[7] = r'Emily'
+labels[8] = r'Andrew'
 
 nx.draw_networkx_labels(G, pos, labels, font_size=12)
 plot.xlim(50,500)

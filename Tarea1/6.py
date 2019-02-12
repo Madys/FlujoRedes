@@ -21,11 +21,11 @@ nx.draw_networkx_nodes(G, pos, nodelist=node2,node_size=400, node_color='y', nod
 nx.draw_networkx_edges(G, pos,width=1, alpha=0.8, edge_color='black')
 
 labels = {}
-labels[1] = r'$Mayra$'
-labels[2] = r'$Andrew$'
-labels[3] = r'$Emily$'
-labels[4] = r'$Laura$'
-labels[5] = r'$Oliver$'
+labels[1] = r'Mayra'
+labels[2] = r'Andrew'
+labels[3] = r'Emily'
+labels[4] = r'Laura'
+labels[5] = r'Oliver'
 
 
 
