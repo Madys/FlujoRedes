@@ -41,7 +41,7 @@ Tarea 1: Representación de redes a través de la teoría de grafos
 
 \section*{Introducción}
 
-La teoría de grafos tiene aplicaci\'n en diversas áreas, debido a que las redes aparecen prácticamente en todas las actividades de nuestra vida diaria: sistemas de comunicaciones, sistemas hidráulicos, circuitos eléctricos y electrónicos, sistemas mecánicos, redes sociales, entre otros. 
+La teoría de grafos tiene aplicación en diversas áreas, debido a que las redes aparecen prácticamente en todas las actividades de nuestra vida diaria: sistemas de comunicaciones, sistemas hidráulicos, circuitos eléctricos y electrónicos, sistemas mecánicos, redes sociales, entre otros. 
 
 Como constata Ravindra \cite{ahuja2017network}, las redes físicas son quizás las más comunes y mejor identificables. Los sistemas de transporte, cualquiera que sea el medio suelen modelarse en sistemas de distribución  y decisiones logísticas complejos, siendo el Problema de transporte un ejemplo típico de investigación de operaciones. 
 
@@ -151,7 +151,7 @@ Este sistema puede ser representado mediante el grafo mostrado a continuación, 
 \lstinputlisting[language=Python, caption= Canales para irrigación del suelo creados en la presa El cacao.]{8.py}
 \begin{figure}
   \includegraphics[width=.8\columnwidth]{8.eps}
-  \caption{RCanales para irrigación del suelo creados en la presa El cacao.}
+  \caption{Canales para irrigación del suelo creados en la presa El cacao.}
   \label{fig:8}
 \end{figure}
 
@@ -159,9 +159,9 @@ Este sistema puede ser representado mediante el grafo mostrado a continuación, 
 
 En la Universidad de Oriente se quiere realizar un concurso de habilidades entre las carreras de Ingeniería en Electrónica, Ingeniería en Automática, Licenciatura en Física, Ingeniería en Informática y Licenciatura en Matemática-Cibernética. Las habilidades a evaluar serán matemática y programación. 
 
-El siguiente grafo muestra como está organizado el concurso. Cada vértice representa a los estudiantes que estudian una de las carreras y las aristas, con qué estudiantes pueden participar en cada habilidad. Todos los vértices son de color rojo porque todos los estudiantes pueden competir con estudiantes de su misma carrera.
+El siguiente grafo muestra como está organizado el concurso. Cada vértice representa a los estudiantes de una de las carreras y las aristas, con cuales estudiantes pueden participar en cada habilidad. Todos los vértices son de color rojo porque todos los estudiantes pueden competir con estudiantes de su misma carrera.
 
-Los vértices rojos unen a los que pueden concursar en entre sí en matemáticas y los azules, los que pueden concursar en programación.
+Los vértices rojos unen a los que pueden concursar entre sí en matemáticas y los azules, los que pueden concursar en programación.
 
 \lstinputlisting[language=Python, caption= Concurso de habilidades.]{9.py}
 \begin{figure}
@@ -182,7 +182,7 @@ Estos grafos pueden utilizarse para representar la cuenca hidrográfica de un r�
   \label{fig:10}
 \end{figure}
 
-\section{multigrafo dirigido cíclico}
+\section{Multigrafo dirigido cíclico}
 
 Este tipo de grafo es especialmente útil para representar viajes por lugares a los que se puede llegar mediante diferentes vías, regresando luego al punto de origen. Un ejemplo concreto de esto sería un recorrido vacacional por varias ciudades. Partiendo de la ciudad A, hay tres posibles vías  para llegar a la ciudad B, en bus, en auto de alquiler o en tren, cada uno de estos medios de transporte representaría una arista diferente para unir los vértices. Así sucesivamente, se tienen en cuenta las posibles vías de transporte hacia las distintas ciudades hasta completar el recorrido y regresar a casa. 
 
@@ -197,7 +197,7 @@ Este tipo de grafo es especialmente útil para representar viajes por lugares a 
 
 
 
-\section{multigrafo dirigido reflexivo}
+\section{Multigrafo dirigido reflexivo}
 González-Cervantes \cite{gonzalez2016potencial} empleó teoría de grafos para representar el potencial eléctrico en el corazón, demostrando que se pueden incorporar las leyes fisiológicas involucradas. Cada uno de los vértices representa uno de los puntos principales que generan los impulsos eléctricos y que llevan la electricidad a cada parte del corazón, las aristas describen el valor máximo de voltaje y su
 duración en tiempo que descarga cada vértice. Además, puede proporcionar información con respecto al potencial eléctrico por zonas para una mejor localización.
 En la imagen se muestra la representación con grafos del intervalo PR.
