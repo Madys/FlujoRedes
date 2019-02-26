@@ -1,4 +1,4 @@
-\documentclass{article}
+¡¡+¡''¡\documentclass{article}
 \usepackage[spanish]{babel}
 \usepackage{graphicx}
 \usepackage{listings}
@@ -74,17 +74,14 @@ La teoría de los grafos también ha sido usada en química, debido a la posibil
 
 La mayoría de los esquemas de líneas de autobuses, tranvías o trenes del transporte público pueden ser representados por grafos simples no dirigidos acíclicos.
 
-En la figura \ref{Figura:1} se muestra una sección de ochos estaciones de la Línea 2 del Metro de Monterrey, donde las estaciones son los nodos y el tramo de línea entre ellos, los vértices. 
+En la \ref{Figura 1} se muestra una sección de ochos estaciones de la Línea 2 del Metro de Monterrey, donde las estaciones son los nodos y el tramo de línea entre ellos, los vértices. 
 
 Para posicionar los nodos de este grafo se empleó el spring layout. Se obtuvieron resultados igualmente satisfactorios empleando otros layouts.
-\newpage
+
 \begin{figure}
-\begin{center}
-  \includegraphics[width=.7\columnwidth]{fig1.eps}
-   \end{center}
+  \includegraphics[width=.8\columnwidth]{fig1.eps}
   \caption{Representación con un grafo de ocho estaciones de la Línea 2 del Metro de Monterrey.}
-  \label{Figura:1}
- 
+  \label{Figura 1}
 \end{figure}
 
 \lstinputlisting[language=Python, caption=Representación con un grafo de ocho estaciones de la Línea 2 del Metro de Monterrey.]{Ej1.py}
@@ -92,14 +89,12 @@ Para posicionar los nodos de este grafo se empleó el spring layout. Se obtuvier
 \section{Grafo simple no dirigido cíclico}
 
 Este tipo de grafos es adecuado para representar relaciones comerciales entre empresas al igual que relaciones de parentezco, amistad o romance entre personas.
-En la figura \ref{Figura 2} se muestra un grafo que representa las relaciones de amistad en un grupo de diez personas. Los vértices son las personas y las aristas, las personas que tienen una relación de amistad.
+En la \ref{Figura 2} se muestra un grafo que representa las relaciones de amistad en un grupo de diez personas. Los vértices son las personas y las aristas, las personas que tienen una relación de amistad.
 
 Para posicionar este grafo se usó el Fruchterman-Reingold layout. Este fue diseñado para dibujar gráficos no dirigidos, con el objetivo de distribuir los vértices uniformemente en el marco, haciendo que las longitudes de los bordes sean uniformes y reflejando la simetría \cite{fruchterman1991graph}.
  
 \begin{figure}
- \begin{center}
-  \includegraphics[width=.6\columnwidth]{fig2.eps}
-   \end{center}
+  \includegraphics[width=.7\columnwidth]{fig2.eps}
   \caption{Relaciones de amistad en un grupo de personas.}
   \label{Figura 2}
 \end{figure}
@@ -110,7 +105,7 @@ Para posicionar este grafo se usó el Fruchterman-Reingold layout. Este fue dise
 
 Un criador de perros posee seis razas diferentes de estos animales. Con un grafo de este tipo puede representar de cuales de estos animales ha obtenido crías, siendo los vértices las razas de perro y las aristas la unión entre razas que han tenido crías.
 
-En la figura \ref{Figura 3} se puede observar que todas las razas excepto la Beagle, que es recién adquirida y aún no se ha reproducidos, han tenido crías con su misma raza (vértices en rojo). También se observa que han habido cruzamientos entre bóxer y bulldog y entre pitbull y rottweiler.
+En la \ref{Figura 3} se puede observar que todas las razas excepto la Beagle, que es recién adquirida y aún no se ha reproducidos, han tenido crías con su misma raza (vértices en rojo). También se observa que han habido cruzamientos entre bóxer y bulldog y entre pitbull y rottweiler.
 
 Para posicionar este grafo se usó el Kamada-Kawai layout, diseñado para dibujar grafos ponderados no dirigidos \cite{kamada1989algorithm}. Los layouts circular y shell mostraron también resultados similares.
 
@@ -127,14 +122,14 @@ Para posicionar este grafo se usó el Kamada-Kawai layout, diseñado para dibuja
 
 La cadena de propagación de las ITS (Infecciones de Transmisión Sexual) para las cuales no se conoce cura o las que solo afectan al individuo una vez en la vida, pueden representarse mediante grafos simples dirigidos acíclicos. En este caso cada sujeto es un vértice y la dirección de transmisión de la enfermedad es representada en la arista. Desde la enfermedad se propaga desde la persona portadora hacia el sujeto sano que posteriormente se convierte en portador y contagia a otros sujetos sanos.
 
-De los layouts empleados para posicionar los elementos de la figura \ref{Figura 4} el Fruchterman-Reingold fue el más adecuado.
+De los layouts empleados para posicionar los elementos de la \ref{Figura 4} el Fruchterman-Reingold fue el más adecuado.
 
 \begin{figure}
   \includegraphics[width=.8\columnwidth]{fig4.eps}
   \caption{Representación de la transmisión de una ITS en un grupo de personas.}
   \label{Figura 4}
 \end{figure}
-\newpage
+
 \lstinputlisting[language=Python, caption=Representación de la transmisión de una ITS en un grupo de personas.]{Ej4.py}
 
 
@@ -142,7 +137,7 @@ De los layouts empleados para posicionar los elementos de la figura \ref{Figura 
 
 En ciudades con carreteras estrechas como Santiago de Cuba, en diferentes sectores, las carreteras son de un solo sentido y se representan con grafos de este tipo. Las aristas representan las calles y los vértices son las intersecciones entre al menos dos aristas.
 
-Luego de probar varios layouts, el spectral fue el que arrojó el resultado deseado para dibujar la figura \ref{Figura 5}.
+Luego de probar varios layouts, el spectral fue el que arrojó el resultado deseado para dibujar la \ref{Figura 5}.
 
 \begin{figure}
   \includegraphics[width=.8\columnwidth]{fig5.eps}
@@ -160,15 +155,13 @@ Un grafo en el que cada vértice es una empresa de servicios y las aristas, la u
 Un sitio web pequeño, en el cual se accede a todas sus páginas a través de un menú estático también se puede representar con este tipo de grafo. 
 
 Otro ejemplo está dado por la representación de un grupo de personas conectadas a una red social y los perfiles de otras personas que tengan abiertos en el navegador en ese momento. Cada una de esas persona también pudiesen estar mirando su propio
-perfil. En el grafo de la figura \ref{Figura 6} los vértices son las personas y las aristas indican el perfil de qué personas tiene cada uno abierto en el navegador. Puede apreciarse en color rojo que Mayra y Andrew tienen abiertos sus propios perfiles.
+perfil. En el grafo de la \ref{Figura 6} los vértices son las personas y las aristas indican el perfil de qué personas tiene cada uno abierto en el navegador. Puede apreciarse en color rojo que Mayra y Andrew tienen abiertos sus propios perfiles.
 
 Para obtener la forma deseada del grafo dieron resultados similares el circular layout y el shell.
 
 
 \begin{figure}
-\begin{center}
-  \includegraphics[width=.6\columnwidth]{fig6.eps}
-  \end{center}
+  \includegraphics[width=.8\columnwidth]{fig6.eps}
   \caption{Representación de personas mirando perfiles en redes sociales.}
   \label{Figura 6}
 \end{figure}
@@ -180,7 +173,7 @@ Para obtener la forma deseada del grafo dieron resultados similares el circular 
 
 La ruta entre Santiago de Cuba y Holguín puede representarse  como un multigrafo no dirigido cíclico. En un pueblo llamado Caballería la carretera principal se bifurca, pudiendo continuar por la ruta principal hasta Banes, o por el camino alternativo de Caballería, que, aunque es más largo, puede recorrerse en menor tiempo a causa del poco tránsito.
 
-En la figura \ref{Figura 7} los vértices representan las cabeceras municipales, que están simplemente enumeradas por no ser de interés para el ejemplo mencionado. Para la visualización se empleó el layout Kamada-Kawai.
+En la \ref{Figura 7} los vértices representan las cabeceras municipales, que están simplemente enumeradas por no ser de interés para el ejemplo mencionado. Para la visualización se empleó el layout Kamada-Kawai.
 
 \begin{figure}
   \includegraphics[width=.8\columnwidth]{fig7.eps}
@@ -194,14 +187,14 @@ En la figura \ref{Figura 7} los vértices representan las cabeceras municipales,
 \section{Multigrafo no dirigido cíclico}
 
 En la presa El cacao, ubicada en el Municipio Cotorro, Ciudad de La Habana, se realizó un proyecto para favorecer la agricultura. Al rededor de la presa se construyeron una serie de canales para mantener el suelo húmedo durante todo el año.
-Este sistema puede ser representado mediante el grafo de la figura \ref{Figura 8}, el cual los vértices representan la unión entre uno o más canales y las aristas, cada uno de los canales. El layout Kamada-Kawai fue el que mejores resultados de visualización arrojó.
+Este sistema puede ser representado mediante el grafo de la \ref{Figura 8}, el cual los vértices representan la unión entre uno o más canales y las aristas, cada uno de los canales. El layout Kamada-Kawai fue el que mejores resultados de visualización arrojó.
 
 \begin{figure}
   \includegraphics[width=.8\columnwidth]{fig8.eps}
   \caption{Canales para irrigación del suelo creados en la presa El cacao.}
   \label{Figura 8}
 \end{figure}
-\newpage
+
 \lstinputlisting[language=Python, caption= Canales para irrigación del suelo creados en la presa El cacao.]{Ej8.py}
 
 
@@ -209,7 +202,7 @@ Este sistema puede ser representado mediante el grafo de la figura \ref{Figura 8
 
 En la Universidad de Oriente se quiere realizar un concurso de habilidades entre las carreras de Ingeniería en Electrónica, Ingeniería en Automática, Licenciatura en Física, Ingeniería en Informática y Licenciatura en Matemática-Cibernética. Las habilidades a evaluar serán matemática y programación. 
 
-La figura \ref{Figura 9} muestra como está organizado el concurso. Cada vértice representa a los estudiantes que estudian una de las carreras y las aristas, con qué estudiantes pueden participar en cada habilidad. Todos los vértices son de color rojo porque todos los estudiantes pueden competir con estudiantes de su misma carrera.
+La \ref{Figura 9} muestra como está organizado el concurso. Cada vértice representa a los estudiantes que estudian una de las carreras y las aristas, con qué estudiantes pueden participar en cada habilidad. Todos los vértices son de color rojo porque todos los estudiantes pueden competir con estudiantes de su misma carrera.
 
 Los vértices rojos unen a los que pueden concursar en entre sí en matemáticas y los azules, los que pueden concursar en programación.
 
@@ -226,7 +219,7 @@ Para la visualización se empleó el layout circular.
 
 \section{Multigrafo dirigido acíclico}
 
-Estos grafos pueden utilizarse para representar la cuenca hidrográfica de un río en su flujo hacia el mar. En la figura \ref{Figura 10}los vértices representan los puntos en los que al menos dos ramificaciones del delta confluyen o se separan. Para que el grafo tiviese exactamente la forma deseada, se insertaron las coordenadas de los nodos de manera manual.
+Estos grafos pueden utilizarse para representar la cuenca hidrográfica de un río en su flujo hacia el mar. En la \ref{Figura 10}los vértices representan los puntos en los que al menos dos ramificaciones del delta confluyen o se separan. Para que el grafo tiviese exactamente la forma deseada, se insertaron las coordenadas de los nodos de manera manual.
 
 \begin{figure}
   \includegraphics[width=.8\columnwidth]{fig10.eps}
@@ -241,11 +234,11 @@ Estos grafos pueden utilizarse para representar la cuenca hidrográfica de un r�
 
 Este tipo de grafo es especialmente útil para representar viajes por lugares a los que se puede llegar mediante diferentes vías, regresando luego al punto de origen. Un ejemplo concreto de esto sería un recorrido vacacional por varias ciudades. Partiendo de la ciudad A, hay tres posibles vías  para llegar a la ciudad B, en bus, en auto de alquiler o en tren, cada uno de estos medios de transporte representaría una arista diferente para unir los vértices. Así sucesivamente, se tienen en cuenta las posibles vías de transporte hacia las distintas ciudades hasta completar el recorrido y regresar a casa. 
 
-Para posicionar los vértices en la figura \ref{Figura 11}se empleó el layout shell, aunque el circular también ofrece buenos resultados en este tipo de grafos.
+Para posicionar los vértices en la \ref{Figura 11}se empleó el layout shell, aunque el circular también ofrece buenos resultados en este tipo de grafos.
 
 
 \begin{figure}
-  \includegraphics[width=.6\columnwidth]{fig11.eps}
+  \includegraphics[width=.8\columnwidth]{fig11.eps}
   \caption{Representación de las posibles maneras de elegir la ruta de un circuito vacacional.}
   \label{Figura 11}
 \end{figure}
@@ -257,7 +250,7 @@ Para posicionar los vértices en la figura \ref{Figura 11}se empleó el layout s
 
 González-Cervantes \cite{gonzalez2016potencial} empleó teoría de grafos para representar el potencial eléctrico en el corazón, demostrando que se pueden incorporar las leyes fisiológicas involucradas. Cada uno de los vértices representa uno de los puntos principales que generan los impulsos eléctricos y que llevan la electricidad a cada parte del corazón, las aristas describen el valor máximo de voltaje y su
 duración en tiempo que descarga cada vértice. Además, puede proporcionar información con respecto al potencial eléctrico por zonas para una mejor localización.
-En la figura \ref{Figura 12} se muestra la representación con grafos del intervalo PR. Debido a que se siguió la forma del corazón para dibujar el grafo, las coordenadas de los vértices fueron ingresadas manualmente.
+En la \ref{Figura 12} se muestra la representación con grafos del intervalo PR. Debido a que se siguió la forma del corazón para dibujar el grafo, las coordenadas de los vértices fueron ingresadas manualmente.
 
 
 \begin{figure}
