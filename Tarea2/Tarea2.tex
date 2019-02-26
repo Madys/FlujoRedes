@@ -11,9 +11,7 @@
 \definecolor{mauve}{rgb}{0.58,0,0.82}
 
 \usepackage{geometry}
-\addtolength{\oddsidemargin}{-.1in}
-\addtolength{\evensidemargin}{-.1in}
-\addtolength{\textwidth}{.7in}
+
 
 \addtolength{\topmargin}{-.70in}
 \addtolength{\textheight}{1in}
@@ -24,7 +22,7 @@
   breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
   breaklines=true,                 % sets automatic line breaking
   captionpos=b,                    % sets the caption-position to bottom
-  commentstyle=\color{mygreen},    % comment style
+  commentstyle=\color{dkgreen},    % comment style
   deletekeywords={...},            % if you want to delete keywords from the given language
   escapeinside={\%}{)},          % if you want to add LaTeX within your code
   extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
@@ -35,7 +33,7 @@
   language=Octave,                 % the language of the code
   morekeywords={*,...},            % if you want to add more keywords to the set
   numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
-  numbersep=6pt,                   % how far the line-numbers are from the code
+  numbersep=5pt,                   % how far the line-numbers are from the code
   numberstyle=\tiny\color{gray}, % the style that is used for the line-numbers
   rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
   showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
@@ -43,7 +41,7 @@
   showtabs=false,                  % show tabs within strings adding particular underscores
   stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
   stringstyle=\color{mauve},     % string literal style
-  tabsize=0,	                   % sets default tabsize to 2 spaces
+  tabsize=2,	                   % sets default tabsize to 2 spaces
   title=\lstname                  % show the filename of files included with \lstinputlisting; also try caption instead of title
 }
 \title{
@@ -63,27 +61,39 @@ La teoría de grafos tiene aplicación en diversas áreas, debido a que las rede
 
 Como constata Ravindra \cite{ahuja2017network}, las redes físicas son quizás las más comunes y mejor identificables. Los sistemas de transporte, cualquiera que sea el medio suelen modelarse en sistemas de distribución  y decisiones logísticas complejos, siendo el Problema de transporte un ejemplo típico de investigación de operaciones. 
 
-En este problema, un transportista con inventario de mercancías en sus almacenes debe enviar estos productos a centros minoristas geográficamente dispersos, cada uno con una demanda dada del cliente, donde el objetivo es incurrir en los mínimos gastos de transporte posibles. Una de las maneras de resolver este problemas es mediante algoritmos computacionales basados en grafos.
-
 Otro ejemplo representativo de uso de grafos son los algoritmos de búsqueda web de Google. Estos se basan en el gráfico WWW, que contiene todas las páginas web como vértices y los  hipervínculos como bordes \cite{chung2010graph}.
 
 La teoría de los grafos también ha sido usada en química, debido a la posibilidad de representar los modelos estructurales mediante diagramas. En un grafo molecular, los vértices representan a los átomos y los lados a los enlaces químicos que conectan ciertas parejas de átomos \cite{amador}.
 
+Para acomodar los grafos, de manera que su forma refleje lo que se desea, se han desarrollo varios layouts: algoritmos que devuelven una lista de posiciones para los nodos, según  parámetros definidos.
+
+Entre los layouts más conocidos se destacan:
+\begin{itemize}
+
+\item Bipartite layout
+\item Circular layout
+\item Kamada kawai layout
+\item Random layout
+\item Rescale layout
+\item Shell layout
+\item Spring layout
+\item Spectral layout
+\end{itemize}
 
 \section{Grafo simple no dirigido acíclico}
 
 La mayoría de los esquemas de líneas de autobuses, tranvías o trenes del transporte público pueden ser representados por grafos simples no dirigidos acíclicos.
 
-En la figura \ref{Figura:1} se muestra una sección de ochos estaciones de la Línea 2 del Metro de Monterrey, donde las estaciones son los nodos y el tramo de línea entre ellos, los vértices. 
+En la figura  \ref{Figura 1} se muestra una sección de ochos estaciones de la Línea 2 del Metro de Monterrey, donde las estaciones son los nodos y el tramo de línea entre ellos, los vértices. 
 
 Para posicionar los nodos de este grafo se empleó el spring layout. Se obtuvieron resultados igualmente satisfactorios empleando otros layouts.
-\newpage
+
 \begin{figure}
 \begin{center}
   \includegraphics[width=.7\columnwidth]{fig1.eps}
    \end{center}
   \caption{Representación con un grafo de ocho estaciones de la Línea 2 del Metro de Monterrey.}
-  \label{Figura:1}
+  \label{Figura 1}
  
 \end{figure}
 
@@ -245,8 +255,10 @@ Para posicionar los vértices en la figura \ref{Figura 11}se empleó el layout s
 
 
 \begin{figure}
+\begin{center}
   \includegraphics[width=.6\columnwidth]{fig11.eps}
   \caption{Representación de las posibles maneras de elegir la ruta de un circuito vacacional.}
+  \end{center}
   \label{Figura 11}
 \end{figure}
 
