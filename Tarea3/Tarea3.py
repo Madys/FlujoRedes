@@ -247,6 +247,17 @@ def ScatterEdges(media,edges,standar):
     plt.ylabel('Cantidad de aristas')
     plt.savefig("scatterEdges.eps")
     plt.savefig("scatterEdges.jpeg")
+    
+#  Boxplots
+#to_plot=[a1_t1_times,a1_t2_times,a1_t3_times,a1_t4_times,a1_t5_times]
+#fig=plt.figure(1,figsize=(9,6))
+#ax=fig.add_subplot(111)
+#bp=ax.boxplot(to_plot, showfliers=False)
+#plt.xlabel('Grafo')
+#plt.ylabel('Tiempo (segundos)')
+#plt.title('Ruta más corta')
+#plt.savefig('BP1.eps', format='eps', dpi=1000)
+#plt.show()
 
 name="undirected"
 nameDi="directed"
