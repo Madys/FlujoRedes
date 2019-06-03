@@ -67,7 +67,7 @@ def GenerateGraphs(size, base):
     for i in range(1,5):  
         print("ciclo"+str(i))
         for j in range(10):        
-#            G=AddEdges(nx.fast_gnp_random_graph(size, 0.5)) 
+#           G=AddEdges(nx.fast_gnp_random_graph(size, 0.5)) 
             G=AddEdges(nx.dense_gnm_random_graph(size,int(size*size*0.2 )))     
             numNodes["fast"].append([G.number_of_edges,size])
             print("fast"+str(j))

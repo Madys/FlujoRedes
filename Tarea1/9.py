@@ -20,20 +20,20 @@ red=[(1,2),(2,3),(1,3),(4,5)]
 
 pos = {1:(200, 100), 2:(100,400), 3:(200, 700), 4:(500,700), 5:(650,400)}
 
-nx.draw_networkx_nodes(G, pos ,node_size=400, node_color='r', node_shape='o')
+nx.draw_networkx_nodes(G, pos ,node_size=400, node_color='r', node_shape='o',alpha=0.6)
 nx.draw_networkx_edges(G, pos, edgelist=blue,width=6, alpha=0.5,
 edge_color='b', style='dashed')
 
 nx.draw_networkx_edges(G, pos, edgelist=red,width=4, alpha=0.5,
 edge_color='r')
 labels = {}
-labels[1] = r'Automática'
-labels[2] = r'Eléctrica'
-labels[3] = r'Física'
-labels[4] = r'Informática'
-labels[5] = r'Cibernética'
+labels[1] = r'Automatica'
+labels[2] = r'Electrica'
+labels[3] = r'Fisica'
+labels[4] = r'Informatica'
+labels[5] = r'Cibernetica'
 
-nx.draw_networkx_labels(G, pos, labels, font_size=12)
+nx.draw_networkx_labels(G, pos, labels, font_size=13)
 
 plot.xlim(20,800)
 plot.axis('off')

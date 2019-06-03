@@ -23,7 +23,7 @@ labels[4] = r'Stanford'
 labels[5] = r'Poodle'
 labels[6] = r'Beagle'
 
-nx.draw_networkx_labels(G, pos, labels, font_size=13,font_color='w')
+nx.draw_networkx_labels(G, pos, labels, font_size=12,font_color='w')
 
 plot.axis('off')
 plot.savefig("fig3.eps")

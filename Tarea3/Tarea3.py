@@ -182,25 +182,19 @@ def MediaDesv (adress,runs,numberOfGraphs,numAlgorithms,name,nameDi):
     df.to_csv("Grafos.csv", index=None) 
 
 def Histograma(adress):
+    counter=0
+    colors=["b","red","green","y","#db2272"]
     df = pd.read_csv(adress)
-    nrows=2
-    ncols=3
-    fig,axes = plt.subplots(nrows=nrows, ncols=ncols, figsize=(10, 10))  
-    counter = 0
-    for i in range(nrows):
-        for j in range(ncols):   
-            ax = axes[i][j]    
-            if counter < len(df.columns):    
-                ax.hist(df[df.columns[counter]], bins=5, color='red', alpha=0.8, label='{}'.format(df.columns[counter]))
-                ax.set_xlabel('Valores')
-                ax.set_ylabel('Ocurrencia')
-                ax.set_ylim([0, 5])
-                leg = ax.legend(loc='upper left')
-                leg.draw_frame(False)  
-            else:
-                ax.set_axis_off()   
-            counter += 1  
-    plt.savefig("histograma.eps")
+    for c in colors:          
+        plt.hist(df[df.columns[counter]], bins=5, color=c, alpha=0.8, label='{}'.format(df.columns[counter]))
+        plt.xlabel('Valores')
+        plt.ylabel('Ocurrencia')
+        plt.ylim([0, 5])
+        leg = plt.legend(loc='upper left')
+        leg.draw_frame(False)   
+        counter += 1  
+        plt.savefig("histograma"+str(counter)+".eps")
+        plt.show()
 
 def ScatterNodes(media,nodos,standar):
     colors = ["y","r","b","black","g"] 
@@ -209,12 +203,12 @@ def ScatterNodes(media,nodos,standar):
     standar=pd.read_csv(standar)
     markers=["d","o","*",">","X"]   
     for i in range(4):
-        x=media["Algoritmo"+str(i)]
+        x=media["Media"+str(i)]
         area=300
         p = pd.read_csv(nodos)
         y=nodes["NodesUndirected"]
         plt.scatter(x, y, s=area, c=colors, alpha=0.5, marker=markers[i])    
-    x=media["Algoritmo"+str(4)]
+    x=media["Media"+str(4)]
     area=300
     p = pd.read_csv(nodos)
     y=nodes["NodesDirected"]
@@ -231,12 +225,12 @@ def ScatterEdges(media,edges,standar):
     standar=pd.read_csv(standar)
     markers=["d","o","*",">","X"]   
     for i in range(4):
-        x=media["Algoritmo"+str(i)]
+        x=media["Media"+str(i)]
         area=300
         p = pd.read_csv(edges)
         y=nodes["EdgesUndirected"]
         plt.scatter(x, y, s=area, c=colors, alpha=0.5, marker=markers[i])    
-    x=media["Algoritmo"+str(4)]
+    x=media["Media"+str(4)]
     area=300
     plt.xlabel('Tiempo promedio de ejecución')
     plt.ylabel('Cantidad de aristas')
@@ -248,16 +242,6 @@ def ScatterEdges(media,edges,standar):
     plt.savefig("scatterEdges.eps")
     plt.savefig("scatterEdges.jpeg")
     
-#  Boxplots
-#to_plot=[a1_t1_times,a1_t2_times,a1_t3_times,a1_t4_times,a1_t5_times]
-#fig=plt.figure(1,figsize=(9,6))
-#ax=fig.add_subplot(111)
-#bp=ax.boxplot(to_plot, showfliers=False)
-#plt.xlabel('Grafo')
-#plt.ylabel('Tiempo (segundos)')
-#plt.title('Ruta más corta')
-#plt.savefig('BP1.eps', format='eps', dpi=1000)
-#plt.show()
 
 name="undirected"
 nameDi="directed"
@@ -274,6 +258,6 @@ runs=20
 #GenerateDiGraph(nameDi,SminDi,SmaxDi, max_weight, numberOfGraphs)
 #RunAll(runs, numAlgorithms, numberOfGraphs, name,nameDi, matrix)
 #MediaDesv ("matrix.csv",runs,numberOfGraphs,numAlgorithms,name,nameDi) 
-#Histograma("Media.csv")
+Histograma("Media.csv")
 #ScatterNodes("Media.csv","Grafos.csv","Standar.csv")
-ScatterEdges("Media.csv","Grafos.csv","Standar.csv") 
+#ScatterEdges("Media.csv","Grafos.csv","Standar.csv") 

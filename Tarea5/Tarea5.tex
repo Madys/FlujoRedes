@@ -70,7 +70,7 @@ El algoritmo de ordenamiento empleado es el propuesto por Fruchterman y Reingold
 
 \section*{Generación de grafos}
 
-Para realizar el experimento son generados 5 grafos aleatoriamente, con la capacidad de flujo en sus aristas, distribuida normalmente, como puede observarse en la figura 1. El ancho de las aristas es proporcional a su capacidad. 
+Para realizar el experimento son generados cinco grafos aleatoriamente, con la capacidad de flujo en sus aristas, distribuida normalmente, como puede observarse en la figura 1. El ancho de las aristas es proporcional a su capacidad. 
 
 \begin{figure}[htbp]
 \centering
@@ -160,7 +160,7 @@ A cada uno de los grafos se les calculan las siguientes características estruct
 
 Para cada combinación de fuente-sumidero en cada grafo se calcula el flujo máximo. En las figuras 8, 9, 10, 11 y 12, se visualizan los flujos para la mejor y peor pareja de fuente-sumidero para los grafos 1, 2, 3, 4 y 5, respectivamente. Los nodos rojos representan las mejores fuente-sumidero, como los grafos son no dirigidos, estos son intercambiables. Los nodos azules son buenas fuente-sumidero y los nodos grises son las peores fuentes-sumideros, en cada grafo. 
 
-En rosado se muestra cuanto flujo pasa por cada arista una vez aplicado al algoritmo de flujo máximo, aunmentando la intensidad del color proporcionalmente a la cantidad de flujo. En las aristas negras no pasa flujo.
+En rosado se muestra cuanto flujo pasa por cada arista una vez aplicado al algoritmo de flujo máximo, aumentando la intensidad del color proporcionalmente a la cantidad de flujo. En las aristas negras no pasa flujo.
 
 \begin{figure}[htbp]
 \subfigure[Mejor pareja, flujo: 73]{\includegraphics[scale=0.55]{mejor1.eps}}
@@ -198,7 +198,7 @@ En rosado se muestra cuanto flujo pasa por cada arista una vez aplicado al algor
 \label{Flujo5} 
 \end{figure}
 
-\section*{Influencia de las características estructurales del grafo en el tiempo de ejecución}
+\section*{Influencia de las características estructurales}
 
 
 En el Cuadro 1 se muestran los resultados del análisis de varianza (ANOVA en lo adelante, por sus siglas en inglés) de las carácterísticas estructurales del grafo para ver su influencia en el tiempo de ejecución del algoritmo de flujo máximo.
@@ -223,43 +223,44 @@ Se observa, además, que existe una relación entre las siguientes característi
   \caption{Resultado del ANOVA para los valores de tiempo}
     \begin{tabular}{|l|r|r|r|r|}
     \toprule
-    \rowcolor[rgb]{ .357,  .608,  .835} \textbf{Factor} & \multicolumn{1}{l|}{\textbf{suma\_cuad}} & \multicolumn{1}{l|}{\textbf{Grados de libertad}} & \multicolumn{1}{l|}{\textbf{F}} & \multicolumn{1}{l|}{\textbf{Prueba}} \\
+    \rowcolor[rgb]{ .357,  .608,  .835} \textbf{Factor} & \multicolumn{1}{l|}{\textbf{suma\_cuad}} & \multicolumn{1}{l|}{\textbf{F}} & \multicolumn{1}{l|}{\textbf{Prueba}} \\
     \midrule
-    Grado & 8.12E-08 & 1     & 0.96  & 0.33 \\
+    Grado & $8.12*10^{-8}$      & 0.96  & 0.33 \\
     \midrule
-    CoefA & 6.78E-08 & 1     & 0.8   & 0.37 \\
+    CoefA & $6.78*10^{-8} $     & 0.8   & 0.37 \\
     \midrule
-    CentCe & 5.12E-09 & 1     & 0.06  & 0.8 \\
+    CentCe & $5.12*10^{-9}$     & 0.06  & 0.8 \\
     \midrule
-    CentCa & 2.16E-07 & 1     & 2.5   & 0.11 \\
+    CentCa & $2.16*10^{-7} $    & 2.5   & 0.11 \\
     \midrule
-    Excent & 2.32E-08 & 1     & 0.27  & 0.6 \\
+    Excent & $2.32*10^{-8} $     & 0.27  & 0.6 \\
     \midrule
-    RangoP & 2.11E-07 & 1     & 2.48  & 0.11 \\
+    RangoP & $2.11*10^{-7} $     & 2.48  & 0.11 \\
     \midrule
-    Grado:CoefA & 4.45E-07 & 1     & 5.23  & 0.02 \\
+    Grado:CoefA & $4.45*10^{-7} $     & 5.23  & 0.02 \\
     \midrule
-    Grado:CentCe & 1.00E-06 & 1     & 11.8  & 0.0006 \\
+    Grado:CentCe & $1.00*10^{-6}$     & 11.8  & 0.0006 \\
     \midrule
-    Grado:CentCa & 1.55E-06 & 1     & 18.28 & 2.00E-05 \\
+    Grado:CentCa & $1.55*10^{-6} $  & 18.28 & $2.00*10^{-
+    5}$ \\
     \midrule
-    Grado:Excent & 1.84E-07 & 1     & 2.16  & 0.14 \\
+    Grado:Excent & $1.84*10^{-7}$   & 2.16  & 0.14 \\
     \midrule
-    Grado:RangoP & 2.30E-07 & 1     & 2.7   & 0.1 \\
+    Grado:RangoP & $2.30*10^{-7}$ & 2.7   & 0.1 \\
     \midrule
-    CentCe:CentCa & 2.11E-07 & 1     & 2.48  & 0.12 \\
+    CentCe:CentCa & $2.11*10^{-7} $ & 2.48  & 0.12 \\
     \midrule
-    CentCe:Excent & 1.53E-07 & 1     & 1.8   & 0.18 \\
+    CentCe:Excent & $1.53*10^{-7}$   & 1.8   & 0.18 \\
     \midrule
-    CentCe:RangoP & 7.70E-07 & 1     & 9.06  & 0.002 \\
+    CentCe:RangoP & $7.70*10^{-7} $ & 9.06  & 0.002 \\
     \midrule
-    CentCa:Excent & 1.30E-07 & 1     & 1.53  & 0.22 \\
+    CentCa:Excent & $1.30*10^{-7} $ & 1.53  & 0.22 \\
     \midrule
-    CentCa:RangoP & 1.89E-06 & 1     & 22.25 & 2.50E-06 \\
+    CentCa:RangoP &$ 1.89*10^{-6} $& 22.25 & $2.50*10^{-6} $\\
     \midrule
-    Excent:RangoP & 1.52E-07 & 1     & 1.79  & 0.18 \\
+    Excent:RangoP & $1.52*10^{-7}$  & 1.79  & 0.18 \\
     \midrule
-    Residual & 0.00015678 & 1844  &       &  \\
+    Residual & 0.00015678 & 1844 &  \\
     \bottomrule
     \end{tabular}%
   \label{tab:Cuadro 1}%
@@ -293,51 +294,51 @@ Se observa, además, que existe una relación entre las siguientes característi
   \caption{Resultado del ANOVA para los valores de flujo máximo}
     \begin{tabular}{|l|r|r|r|r|}
     \toprule
-    \rowcolor[rgb]{ .357,  .608,  .835} \textbf{Factor} & \multicolumn{1}{l|}{\textbf{sum\_cuad}} & \multicolumn{1}{l|}{\textbf{Grados de libertad}} & \multicolumn{1}{l|}{\textbf{F}} & \multicolumn{1}{l|}{\textbf{Prueba}} \\
+    \rowcolor[rgb]{ .357,  .608,  .835} \textbf{Factor} & \multicolumn{1}{l|}{\textbf{sum\_cuad}} & \multicolumn{1}{l|}{\textbf{F}} & \multicolumn{1}{l|}{\textbf{Prueba}} \\
     \midrule
-    Grado & 38.7288463 & 1     & 0.459047 & 0.498155 \\
+    Grado & 38.72      & 0.5 & 0.5 \\
     \midrule
-    CoefA & 1363.23246 & 1     & 16.15817 & 6.06E-05 \\
+    CoefA & 1363.23      & 16.16 & $6.06*10^{-5}$ \\
     \midrule
-    CentCe & 143.623743 & 1     & 1.702349 & 0.192144 \\
+    CentCe & 143.62     & 1.7 & 0.19 \\
     \midrule
-    CentCa & 976.245999 & 1     & 11.57129 & 0.000684 \\
+    CentCa & 976.24     & 11.57 & 0 \\
     \midrule
-    Excent & 155.426353 & 1     & 1.842243 & 0.174855 \\
+    Excent & 155.42    & 1.84 & 0.17 \\
     \midrule
-    PageR & 508.236449 & 1     & 6.024044 & 0.014204 \\
+    PageR & 508.23   & 6.02 & 0.01 \\
     \midrule
-    Grado:CoefA & 650.232041 & 1     & 7.707095 & 0.005556 \\
+    Grado:CoefA & 650.23      & 7.7 & 0 \\
     \midrule
-    Grado:CentCe & 93.006395 & 1     & 1.10239 & 0.29388 \\
+    Grado:CentCe & 93   & 1.1 & 0.29 \\
     \midrule
-    Grado:CentCa & 112.234812 & 1     & 1.330301 & 0.248901 \\
+    Grado:CentCa & 112.23     & 1.33 & 0.25 \\
     \midrule
-    Grado:Excent & 162.655867 & 1     & 1.927934 & 0.165153 \\
+    Grado:Excent & 162.65   & 1.93 & 0.16 \\
     \midrule
-    Grado:PageR & 660.247786 & 1     & 7.82581 & 0.005204 \\
+    Grado:PageR & 660.24     & 7.82 & 0.005 \\
     \midrule
-    CoefA:CentCe & 335.675561 & 1     & 3.978708 & 0.046226 \\
+    CoefA:CentCe & 335.67     & 3.97& 0.04 \\
     \midrule
-    CoefA:CentCa & 49.9598544 & 1     & 0.592166 & 0.441682 \\
+    CoefA:CentCa & 49.95    & 0.59 & 0.44 \\
     \midrule
-    CoefA:Excent & 16.9158218 & 1     & 0.2005 & 0.65437 \\
+    CoefA:Excent & 16.91    & 0.2 & 0.65 \\
     \midrule
-    CoefA:PageR & 553.464369 & 1     & 6.560123 & 0.010508 \\
+    CoefA:PageR & 553.46     & 6.56 & 0.01 \\
     \midrule
-    CentCe:CentCa & 7.00601142 & 1     & 0.083041 & 0.77325 \\
+    CentCe:CentCa & 7     & 0.08 & 0.77 \\
     \midrule
-    CentCe:Excent & 23.2094891 & 1     & 0.275098 & 0.599995 \\
+    CentCe:Excent & 23.2     & 0.27 & 0.6 \\
     \midrule
-    CentCe:PageR & 85.7199062 & 1     & 1.016024 & 0.313596 \\
+    CentCe:PageR & 85.71     & 1.024 & 0.31 \\
     \midrule
-    CentCa:Excent & 66.437239 & 1     & 0.78747 & 0.374982 \\
+    CentCa:Excent & 66.43     & 0.78 & 0.37 \\
     \midrule
-    CentCa:PageR & 106.077006 & 1     & 1.257314 & 0.262307 \\
+    CentCa:PageR & 106.07     & 1.25 & 0.26 \\
     \midrule
-    Excent:PageR & 104.744206 & 1     & 1.241516 & 0.265325 \\
+    Excent:PageR & 104.74     & 1.24& 0.26 \\
     \midrule
-    Residual & 155237.086 & 1840  &       &  \\
+    Residual & 155237.08 & 1840  &   \\
     \bottomrule
     \end{tabular}%
   \label{tab:Cuadro 2}%

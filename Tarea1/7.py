@@ -35,9 +35,9 @@ labels[1] = r'Santiago'
 labels[2] = r'1'
 labels[3] = r'2'
 labels[4] = r'3'
-labels[5] = r'Caballería'
-labels[6] = r'Caballería'
-labels[7] = r'Holguín'
+labels[5] = r'Caballeria'
+labels[6] = r'Caballeria'
+labels[7] = r'Holguin'
 
 
 plot.xlim(20,800)

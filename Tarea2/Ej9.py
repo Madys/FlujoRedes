@@ -31,7 +31,7 @@ labels[5] = r'Cibernetica'
 for i in pos:    
     pos[i][1] = pos[i][1] -0.03 
     pos[i][0] = pos[i][0] -0.008 
-nx.draw_networkx_labels(G, pos, labels, font_size=15)
+nx.draw_networkx_labels(G, pos, labels, font_size=12)
 
 plot.axis('off')
 plot.savefig("fig9.eps")

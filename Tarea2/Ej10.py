@@ -29,12 +29,12 @@ green=[(1,2),(2,5),(1,8)]
 
 pos = {1:(400, 700), 2:(300,300), 3:(150, 100), 4:(400,200), 5:(300,100),6:(250,500), 7:(100
        ,100), 8:(500, 300), 9:(700,100)}
-nx.draw_networkx_nodes(G, pos ,node_size=400, node_color='y', node_shape='o')
-nx.draw_networkx_edges(G, pos, edgelist=blue,width=6, alpha=0.5,
+nx.draw_networkx_nodes(G, pos, node_size=400, node_color='y', node_shape='o')
+nx.draw_networkx_edges(G, pos, edgelist=blue, width=6, alpha=0.5,
 edge_color='b', style='dashed')
-nx.draw_networkx_edges(G, pos, edgelist=green,width=5, alpha=0.5,
+nx.draw_networkx_edges(G, pos, edgelist=green, width=5, alpha=0.5,
 edge_color='g')
-nx.draw_networkx_edges(G, pos, edgelist=red,width=4, alpha=0.5,
+nx.draw_networkx_edges(G, pos, edgelist=red, width=4, alpha=0.5,
 edge_color='r')
 labels = {}
 labels[1] = r'Nacimiento'

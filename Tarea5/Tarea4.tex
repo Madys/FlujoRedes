@@ -1,0 +1,302 @@
+\documentclass{article}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{listings}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3mm}
+\usepackage[numbers]{natbib}
+\usepackage{color}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\usepackage{graphicx,subcaption}
+\usepackage{geometry}
+\addtolength{\topmargin}{-.70in}
+\addtolength{\textheight}{1in}
+\usepackage{booktabs}
+\usepackage[dvipsnames]{xcolor}
+
+\usepackage{colortbl}
+\lstset{ 
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
+  basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{dkgreen},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%}{)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  firstnumber=1,                % start line enumeration with line 1000
+  frame=single,	                   % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  language=Octave,                 % the language of the code
+  morekeywords={*,...},            % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{gray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mauve},     % string literal style
+  tabsize=2,	                   % sets default tabsize to 2 spaces
+  title=\lstname                  % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+\title{
+Tarea 4
+}
+\author{5280}
+\date{\today}
+\begin{document}
+\maketitle
+
+\section*{Generadores de grafos} 
+
+En la selección de los algoritmos generadores de grafos de NetworkX \citep{networkx} se tiene en cuenta la densidad de las aristas que generan.
+
+\begin{itemize}
+\item \texttt{random\_tree}: Este algoritmo recibe el número de nodos y devuelve un árbol aleatorio. 
+
+\item \texttt{dense\_gnm\_random}: Recibe como parámetros directamente el número de nodos y el número de aristas, el algoritmo los distribuye aleatoriamente.
+
+\item \texttt{erdos\_renyi}: Este algoritmo recibe el número de nodos como parámetros y una probabilidad de creación de aristas, por lo tanto la cantidad de aristas varía de un grafo a otro, manteniendo la misma cantidad de nodos. 
+\end{itemize}
+
+\section*{Algoritmos de flujo máximo}
+
+Los algoritmos de flujo máximose eligen de modo que no generen errores cuando se les pasan grafos con nodos no conexos. Los tres reciben como parámetros el grafo, el nodo fuente y el nodo sumidero.
+
+\begin{itemize}
+\item \texttt{edmonds\_karp}: Este algoritmos es una implementación del método de Ford-Fulkerson, con la particularidad de que el orden para ir buscando los caminos está definido.
+
+\item \texttt{dinitz}: La introducción de los conceptos nivel de grafo y bloqueo de flujo es lo que define el rendimiento de este algoritmo.
+
+\item \texttt{boykov\_kolmogorov}: Aunque este algoritmo está pensado para grafos dirigidos, también fuciona con grafos no dirigidos.
+
+\end{itemize} 
+
+\section*{Generación de datos}
+
+Son generados diez grafos de 100, 200, 400 y 800 nodos, con cada uno de los tres algoritmos generadores elegidos, empleando pesos con distribución normal alrededor de once con una varianza de siete, como puede observarse en la figura \pageref{Figura 1}.
+
+\begin{figure}
+\begin{center}
+  \includegraphics[width=.8\columnwidth]{HistogramaGrafo.eps}
+\end{center}
+\vspace*{-8mm}
+\caption{Histograma de los pesos de las aristas de uno de los grafos de 400 nodos generados.}
+  \label{Figura 1} 
+\end{figure}
+
+Los datos para realizar el análisis son guardados en una tabla de 1800 filas que consta de las siguientes columnas.
+
+\begin{itemize}
+\item Generador: Nombre del algoritmo generador de grafos.	
+\item Algoritmo: Nombre del algoritmo de flujo máximo.	
+\item Nodos: Cantidad de nodos.	
+\item Densidad: Densidad del grafo.
+\item Mediana: Valor de la mediana obtenida de las cinco iteraciones.	
+\item Media: Valor de la media obtenida de las cinco iteraciones.	
+\item Desv: Valor de la desviación estándar obtenida de las cinco. iteraciones.
+\item Var: Valor de la varianza obtenida de las cinco iteraciones.	
+\end{itemize}
+
+A continuación se muestra el código generador de los datos.
+
+\lstinputng[language=Python]{Generador.py} 
+
+\section*{Análisis de varianza}
+
+Para el análisis de varianza, en lo adelante ANOVA, por sus siglas en inglés \citep{anova}, se utilizó el siguiente código.
+
+\lstinputlisting[language=Python]{Anova.py} 
+
+\section*{Efecto que el generador de grafo usado tiene en el tiempo de ejecución}
+
+El ANOVA realizado con los datos obtenidos sobre las mediciones arroja los resultados mostrados en el cuadro 1, o sea, que el generador de grafos sí influye en el tiempo de los algoritmos de flujo.
+
+\begin{table}[htbp]
+  \centering
+  \caption{}
+    \begin{tabular}{|l|l|r|r|r|l|}
+    \toprule
+    \rowcolor[rgb]{ .357,  .608,  .835} \textbf{Grupo 1} & \textbf{Grupo 2} & \multicolumn{1}{l|}{\textbf{Grupo 3}} & \multicolumn{1}{l|}{\textbf{Menos}} & \multicolumn{1}{l|}{\textbf{Mayor}} & \textbf{Rechazar} \\
+    \midrule
+    dense & erdos & 0.0971 & 0.0538 & 0.1405 & True \\
+    \midrule
+    dense & tree  & -0.1993 & -0.2427 & -0.156 & True \\
+    \midrule
+    erdos & tree  & -0.2964 & -0.3398 & -0.2531 & True \\
+    \bottomrule
+    \end{tabular}
+  \label{tab:Cuadro 1}
+\end{table}
+
+La figura 1 muestra el diagrama de caja y bigotes para estas mediciones, donde se aprecia que el generador \texttt{dense\_gnm\_random} es el que más influye en el tiempo de ejecución.
+
+\begin{figure}
+\begin{center}
+  \includegraphics[width=.8\columnwidth]{Generador1.eps}
+\end{center}
+\vspace*{-8mm}
+\caption{Diagrama de caja y bigotes para los generadores de grafo.}
+  \label{Figura 2} 
+\end{figure}
+
+\section*{Efecto que el algoritmo de flujo máximo usado tiene en el tiempo de ejecución}
+
+El cuadro 2 muestra el resultado ANOVA sobre los algoritmos de flujo máximo. Puede observarse que al comparar \texttt{boykov\_kolmogorov} y \texttt{edmonds\_karp}, no existen diferencias entre ellos en cuanto a cómo influencian en el tiempo de ejecución, mientras \texttt{dinitz} sí tiene un comportamiento diferente a ellos. Esto se observa con mayor claridad en el diagrama de caja y bigotes de la figura \pageref{Figura 3}.
+
+
+\begin{table}[htbp]
+  \centering
+  \caption{}
+    \begin{tabular}{|l|l|r|r|r|l|}
+    \toprule
+    \rowcolor[rgb]{ .357,  .608,  .835} \textbf{Grupo 1} & \textbf{Grupo 2} & \multicolumn{1}{l|}{\textbf{Grupo 3}} & \multicolumn{1}{l|}{\textbf{Menos}} & \multicolumn{1}{l|}{\textbf{Mayor}} & \textbf{Rechazar} \\
+    \midrule
+    Boyk  & Dinitz & 0.1893 & 0.1448 & 0.2338 & True \\
+    \midrule
+    Boyk  & Edmond & -0.034 & -0.0786 & 0.0105 & False \\
+    \midrule
+    Dinitz & Edmond & -0.2234 & -0.2679 & -0.1789 & True \\
+    \bottomrule
+    \end{tabular}%
+  \label{tab:Cuadro 2}%
+\end{table}%
+
+\begin{figure}
+\begin{center}
+  \includegraphics[width=.8\columnwidth]{Algoritmo1.eps}
+\end{center}
+\vspace*{-8mm}
+\caption{Diagrama de caja y bigotes para los algoritmos de flujo máximo.}
+  \label{Figura 3} 
+\end{figure}
+
+\section*{Efecto que el número de nodos del grafo tiene en el tiempo de ejecución}
+
+En el cuadro 3 se observa que entre grafos de 100 y 200 nodos no hay un efecto significativo en el tiempo de ejecución. A madida que aumenta el tamaño el efecto va incrementándose. En la figura 3 puede observarse esto gráficamente en el diagrama de caja y bigotes. 
+
+
+\begin{table}[htbp]
+  \centering
+  \caption{}
+    \begin{tabular}{|r|r|r|r|r|l|}
+    \toprule
+    \rowcolor[rgb]{ .357,  .608,  .835} \multicolumn{1}{|l|}{\textbf{Grupo 1}} & \multicolumn{1}{l|}{\textbf{Grupo 2}} & \multicolumn{1}{l|}{\textbf{Grupo 3}} & \multicolumn{1}{l|}{\textbf{Menos}} & \multicolumn{1}{l|}{\textbf{Mayor}} & \multicolumn{1}{l|}{\textbf{Rechazar}} \\
+    \midrule
+    100   & 200   & 0.0216 & -0.0252 & 0.0685 & False \\
+     \midrule
+    100   & 400   & 0.1322 & 0.0853 & 0.179 & True \\
+     \midrule
+    100   & 800   & 0.5155 & 0.4686 & 0.5623 & True \\
+     \midrule
+    200   & 400   & 0.1105 & 0.0636 & 0.1574 & True \\
+     \midrule
+    200   & 800   & 0.4938 & 0.447 & 0.5407 & True \\
+     \midrule
+    400   & 800   & 0.3833 & 0.3364 & 0.4302 & True \\
+     \midrule
+    \end{tabular}%
+  \label{tab:Cuadro 3}
+\end{table}
+
+
+\begin{figure}
+\begin{center}
+  \includegraphics[width=.8\columnwidth]{Nodos1.eps}
+\end{center}
+\vspace*{-8mm}
+\caption{Diagrama de caja y bigotes para el número de nodos de los grafos.}
+  \label{Figura 4} 
+\end{figure}
+
+\section*{Efecto que la densidad del grafo tiene en el tiempo de ejecución}
+
+Para realizar el análisis del efecto de la densidad se realiza un análisis de la distribución de los valores, pues el número de valores de densidad es excesivo para analizarlos en su totalidad. En la figura \pageref{Figura 5} se muestra el histograma realizado sobre las 1800 mediciones realizadas y puede verse que están distribuidos uniformemente en tres grupos de densidad: baja, media y alta.
+
+\begin{figure}
+\begin{center}
+  \includegraphics[width=0.8\columnwidth]{HistoDens.eps}
+\end{center}
+\vspace*{-8mm}
+\caption{Histograma de los valores de densidad.}
+  \label{Figura 5} 
+\end{figure}
+
+En el cuadro 4 se muestran los resultados del ANOVA para los valores de densidad y se puede apreciar que sí tiene efecto en el tiempo de ejecución de los algoritmos. Esto se observa de manera gráfica en la figura \pageref{Figura 6}.
+
+\begin{table}[htbp]
+  \centering
+  \caption{}
+    \begin{tabular}{|l|l|r|r|r|l|}
+    \toprule
+    \rowcolor[rgb]{ .357,  .608,  .835} \textbf{Grupo 1} & \textbf{Grupo 2} & \multicolumn{1}{l|}{\textbf{Grupo 3}} & \multicolumn{1}{l|}{\textbf{Menos}} & \multicolumn{1}{l|}{\textbf{Mayor}} & \textbf{Rechazar} \\
+    \midrule
+    baja  & media & 0.1993 & 0.156 & 0.2427 & True \\
+    \midrule
+    baja  & alta  & 0.2964 & 0.2531 & 0.3398 & True \\
+    \midrule
+    media & alta  & 0.0971 & 0.0538 & 0.1405 & True \\
+    \bottomrule
+    \end{tabular}%
+  \label{tab:Cuadro 4}%
+\end{table}%
+
+\begin{figure}
+\begin{center}
+  \includegraphics[width=.8\columnwidth]{Densidad1.eps}
+\end{center}
+\vspace*{-8mm}
+\caption{Diagrama de caja y bigotes para la densidad de los grafos.}
+  \label{Figura 6} 
+\end{figure}
+
+\section*{Conclusiones}
+
+Al realizar un ANOVA sobre los cuatro parámetros, puede apreciarse en el cuadro 5 que la mayor influencia está dada entre los algoritmos de flujo máximo y el número de nodos de los grafos.
+
+% Table generated by Excel2LaTeX from sheet 'new'
+\begin{table}[htbp]
+  \centering
+  \caption{}
+    \begin{tabular}{|l|r|r|r|r|}
+    \toprule
+    \rowcolor[rgb]{ .357,  .608,  .835}       & \multicolumn{1}{l|}{\textbf{sum\_sq}} & \multicolumn{1}{l|}{\textbf{df}} & \multicolumn{1}{l|}{\textbf{F}} & \multicolumn{1}{l|}{\textbf{PR(>F)}} \\
+    \midrule
+    \textbf{Generador} & -0.009385 & 2     & -0.38830974 & 1 \\
+    \midrule
+    \textbf{Algoritmo} & -0.08859016 & 2     & -3.66547001 & 1 \\
+    \midrule
+    \textbf{Densidad} & -0.00501818 & 2     & -0.20762995 & 1 \\
+    \midrule
+    \textbf{Generador:Algoritmo} & 0.03866208 & 4     & 0.79983312 & 0.37126377 \\
+    \midrule
+    \textbf{Generador:Densidad} & 0.03866208 & 4     & 0.79983323 & 0.37126374 \\
+    \midrule
+    \textbf{Algoritmo:Densidad} & 0.01865205 & 4     & 0.38586979 & 0.67991571 \\
+    \midrule
+    \textbf{Nodos} & 1.03E-11 & 1     & 8.53E-10 & 0.99997669 \\
+    \midrule
+    \textbf{Algoritmo:Nodos} & 23.596196 & 2     & 976.306468 & 3.16E-287 \\
+    \midrule
+    \textbf{Nodos:Densidad} & 0.00972681 & 2     & 0.40245243 & 0.66873877 \\
+    \midrule
+    \textbf{Generador:Nodos} & 0.00915802 & 2     & 0.37891829 & 0.68465657 \\
+    \midrule
+    \textbf{Residual} & 21.5827752 & 1786  &       &  \\
+    \bottomrule
+    \end{tabular}%
+  \label{tab:Cuadro 5}%
+\end{table}%
+
+
+\newpage
+\bibliography{Tarea4}
+\bibliographystyle{plain}
+
+\end{document}

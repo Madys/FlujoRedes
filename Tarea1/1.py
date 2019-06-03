@@ -33,10 +33,10 @@ nx.draw_networkx_edges(G, pos, width=1, alpha=0.8, edge_color='black')
 labels = {}
 labels[1] = r'Sendero'
 labels[2] = r'Santiago Tapia'
-labels[3] = r'San Nicolás'
-labels[4] = r'Anáhuac'
+labels[3] = r'San Nicolas'
+labels[4] = r'Anahuac'
 labels[5] = r'Universidad'
-labels[6] = r'Niños Héroes'
+labels[6] = r'Ninos Heroes'
 labels[7] = r'Regina'
 labels[8] = r'General Anaya'
 

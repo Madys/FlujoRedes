@@ -67,7 +67,7 @@ En la selección de los algoritmos generadores de grafos de NetworkX \citep{netw
 
 \section*{Algoritmos de flujo máximo}
 
-Los algoritmos de flujo máximose eligen de modo que no generen errores cuando se les pasan grafos con nodos no conexos. Los tres reciben como parámetros el grafo, el nodo fuente y el nodo sumidero.
+Los algoritmos de flujo máximo se eligen de modo que no generen errores cuando se les pasan grafos con nodos no conexos. Los tres reciben como parámetros el grafo, el nodo fuente y el nodo sumidero.
 
 \begin{itemize}
 \item \texttt{edmonds\_karp}: Este algoritmos es una implementación del método de Ford-Fulkerson, con la particularidad de que el orden para ir buscando los caminos está definido.
@@ -100,7 +100,7 @@ Los datos para realizar el análisis son guardados en una tabla de 1800 filas qu
 \item Densidad: Densidad del grafo.
 \item Mediana: Valor de la mediana obtenida de las cinco iteraciones.	
 \item Media: Valor de la media obtenida de las cinco iteraciones.	
-\item Desv: Valor de la desviación estándar obtenida de las cinco. iteraciones.
+\item Desv: Valor de la desviación estándar obtenida de las cinco iteraciones.
 \item Var: Valor de la varianza obtenida de las cinco iteraciones.	
 \end{itemize}
 
@@ -116,20 +116,20 @@ Para el análisis de varianza, en lo adelante ANOVA, por sus siglas en inglés \
 
 \section*{Efecto que el generador de grafo usado tiene en el tiempo de ejecución}
 
-El ANOVA realizado con los datos obtenidos sobre las mediciones arroja los resultados mostrados en el cuadro 1, o sea, que el generador de grafos sí influye en el tiempo de los algoritmos de flujo.
+El ANOVA realizado con los datos obtenidos sobre las mediciones arroja los resultados mostrados en el cuadro 1, o sea, que el generador de grafos sí influye en el tiempo de los algoritmos de flujo máximo.
 
 \begin{table}[htbp]
   \centering
-  \caption{}
+  \caption{Influencia de generador de grafos en el tiempo de ejecución de los algoritmos de flujo máximo}
     \begin{tabular}{|l|l|r|r|r|l|}
     \toprule
     \rowcolor[rgb]{ .357,  .608,  .835} \textbf{Grupo 1} & \textbf{Grupo 2} & \multicolumn{1}{l|}{\textbf{Grupo 3}} & \multicolumn{1}{l|}{\textbf{Menos}} & \multicolumn{1}{l|}{\textbf{Mayor}} & \textbf{Rechazar} \\
     \midrule
-    dense & erdos & 0.0971 & 0.0538 & 0.1405 & True \\
+    dense & erdos & 0.0971 & 0.0538 & 0.1405 & Verdadero \\
     \midrule
-    dense & tree  & -0.1993 & -0.2427 & -0.156 & True \\
+    dense & tree  & -0.1993 & -0.2427 & -0.156 & Verdadero \\
     \midrule
-    erdos & tree  & -0.2964 & -0.3398 & -0.2531 & True \\
+    erdos & tree  & -0.2964 & -0.3398 & -0.2531 & Verdadero \\
     \bottomrule
     \end{tabular}
   \label{tab:Cuadro 1}
@@ -153,16 +153,16 @@ El cuadro 2 muestra el resultado ANOVA sobre los algoritmos de flujo máximo. Pu
 
 \begin{table}[htbp]
   \centering
-  \caption{}
+  \caption{ANOVA sobre los algoritmos de flujo máximo}
     \begin{tabular}{|l|l|r|r|r|l|}
     \toprule
     \rowcolor[rgb]{ .357,  .608,  .835} \textbf{Grupo 1} & \textbf{Grupo 2} & \multicolumn{1}{l|}{\textbf{Grupo 3}} & \multicolumn{1}{l|}{\textbf{Menos}} & \multicolumn{1}{l|}{\textbf{Mayor}} & \textbf{Rechazar} \\
     \midrule
-    Boyk  & Dinitz & 0.1893 & 0.1448 & 0.2338 & True \\
+    Boyk  & Dinitz & 0.1893 & 0.1448 & 0.2338 & Verdadero \\
     \midrule
-    Boyk  & Edmond & -0.034 & -0.0786 & 0.0105 & False \\
+    Boyk  & Edmond & -0.034 & -0.0786 & 0.0105 & Falso \\
     \midrule
-    Dinitz & Edmond & -0.2234 & -0.2679 & -0.1789 & True \\
+    Dinitz & Edmond & -0.2234 & -0.2679 & -0.1789 & Verdadero \\
     \bottomrule
     \end{tabular}%
   \label{tab:Cuadro 2}%
@@ -179,27 +179,27 @@ El cuadro 2 muestra el resultado ANOVA sobre los algoritmos de flujo máximo. Pu
 
 \section*{Efecto que el número de nodos del grafo tiene en el tiempo de ejecución}
 
-En el cuadro 3 se observa que entre grafos de 100 y 200 nodos no hay un efecto significativo en el tiempo de ejecución. A madida que aumenta el tamaño el efecto va incrementándose. En la figura 3 puede observarse esto gráficamente en el diagrama de caja y bigotes. 
+En el cuadro 3 se observa que entre grafos de 100 y 200 nodos no hay un efecto significativo en el tiempo de ejecución. A medida que aumenta el tamaño el efecto va incrementándose. En la figura 3 puede observarse esto gráficamente en el diagrama de caja y bigotes. 
 
 
 \begin{table}[htbp]
   \centering
-  \caption{}
+  \caption{ANOVA sobre el tiempo de ejecución}
     \begin{tabular}{|r|r|r|r|r|l|}
     \toprule
     \rowcolor[rgb]{ .357,  .608,  .835} \multicolumn{1}{|l|}{\textbf{Grupo 1}} & \multicolumn{1}{l|}{\textbf{Grupo 2}} & \multicolumn{1}{l|}{\textbf{Grupo 3}} & \multicolumn{1}{l|}{\textbf{Menos}} & \multicolumn{1}{l|}{\textbf{Mayor}} & \multicolumn{1}{l|}{\textbf{Rechazar}} \\
     \midrule
-    100   & 200   & 0.0216 & -0.0252 & 0.0685 & False \\
+    100   & 200   & 0.0216 & -0.0252 & 0.0685 & Falso \\
      \midrule
-    100   & 400   & 0.1322 & 0.0853 & 0.179 & True \\
+    100   & 400   & 0.1322 & 0.0853 & 0.179 & Verdadero \\
      \midrule
-    100   & 800   & 0.5155 & 0.4686 & 0.5623 & True \\
+    100   & 800   & 0.5155 & 0.4686 & 0.5623 & Verdadero \\
      \midrule
-    200   & 400   & 0.1105 & 0.0636 & 0.1574 & True \\
+    200   & 400   & 0.1105 & 0.0636 & 0.1574 & Verdadero \\
      \midrule
-    200   & 800   & 0.4938 & 0.447 & 0.5407 & True \\
+    200   & 800   & 0.4938 & 0.447 & 0.5407 & Verdadero \\
      \midrule
-    400   & 800   & 0.3833 & 0.3364 & 0.4302 & True \\
+    400   & 800   & 0.3833 & 0.3364 & 0.4302 & Verdadero \\
      \midrule
     \end{tabular}%
   \label{tab:Cuadro 3}
@@ -232,16 +232,16 @@ En el cuadro 4 se muestran los resultados del ANOVA para los valores de densidad
 
 \begin{table}[htbp]
   \centering
-  \caption{}
+  \caption{ANOVA sobre los valores de densidad}
     \begin{tabular}{|l|l|r|r|r|l|}
     \toprule
     \rowcolor[rgb]{ .357,  .608,  .835} \textbf{Grupo 1} & \textbf{Grupo 2} & \multicolumn{1}{l|}{\textbf{Grupo 3}} & \multicolumn{1}{l|}{\textbf{Menos}} & \multicolumn{1}{l|}{\textbf{Mayor}} & \textbf{Rechazar} \\
     \midrule
-    baja  & media & 0.1993 & 0.156 & 0.2427 & True \\
+    baja  & media & 0.1993 & 0.156 & 0.2427 & Verdadero \\
     \midrule
-    baja  & alta  & 0.2964 & 0.2531 & 0.3398 & True \\
+    baja  & alta  & 0.2964 & 0.2531 & 0.3398 & Verdadero \\
     \midrule
-    media & alta  & 0.0971 & 0.0538 & 0.1405 & True \\
+    media & alta  & 0.0971 & 0.0538 & 0.1405 & Verdadero \\
     \bottomrule
     \end{tabular}%
   \label{tab:Cuadro 4}%
@@ -263,32 +263,32 @@ Al realizar un ANOVA sobre los cuatro parámetros, puede apreciarse en el cuadro
 % Table generated by Excel2LaTeX from sheet 'new'
 \begin{table}[htbp]
   \centering
-  \caption{}
-    \begin{tabular}{|l|r|r|r|r|}
+  \caption{ANOVA sobre los cuatro parámetros}
+    \begin{tabular}{|r|r|r|r|r|}
     \toprule
-    \rowcolor[rgb]{ .357,  .608,  .835}       & \multicolumn{1}{l|}{\textbf{sum\_sq}} & \multicolumn{1}{l|}{\textbf{df}} & \multicolumn{1}{l|}{\textbf{F}} & \multicolumn{1}{l|}{\textbf{PR(>F)}} \\
+    \rowcolor[rgb]{ .357,  .608,  .835}  \textbf{Factor} & \multicolumn{1}{l|}{\textbf{suma\_cuad}} & \multicolumn{1}{l|}{\textbf{Grados de libertad}} & \multicolumn{1}{l|}{\textbf{F}} & \multicolumn{1}{l|}{\textbf{Prueba)}} \\
     \midrule
-    \textbf{Generador} & -0.009385 & 2     & -0.38830974 & 1 \\
+    \textbf{Generador} & -0.009 & 2     & -0.9 & 1 \\
     \midrule
-    \textbf{Algoritmo} & -0.08859016 & 2     & -3.66547001 & 1 \\
+    \textbf{Algoritmo} & -0.08 & 2     & -3.67 & 1 \\
     \midrule
-    \textbf{Densidad} & -0.00501818 & 2     & -0.20762995 & 1 \\
+    \textbf{Densidad} & -0.008 & 2     & -0.21 & 1 \\
     \midrule
-    \textbf{Generador:Algoritmo} & 0.03866208 & 4     & 0.79983312 & 0.37126377 \\
+    \textbf{Generador:Algoritmo} & 0.03 & 4     & 0.79 & 0.37 \\
     \midrule
-    \textbf{Generador:Densidad} & 0.03866208 & 4     & 0.79983323 & 0.37126374 \\
+    \textbf{Generador:Densidad} & 0.03 & 4     & 0.79 & 0.37 \\
     \midrule
-    \textbf{Algoritmo:Densidad} & 0.01865205 & 4     & 0.38586979 & 0.67991571 \\
+    \textbf{Algoritmo:Densidad} & 0.01 & 4     & 0.38 & 0.67 \\
     \midrule
-    \textbf{Nodos} & 1.03E-11 & 1     & 8.53E-10 & 0.99997669 \\
+    \textbf{Nodos} & 0 & 1     & 0 & 0.99 \\
     \midrule
-    \textbf{Algoritmo:Nodos} & 23.596196 & 2     & 976.306468 & 3.16E-287 \\
+    \textbf{Algoritmo:Nodos} & 23.59 & 2     & 976.3 & 0 \\
     \midrule
-    \textbf{Nodos:Densidad} & 0.00972681 & 2     & 0.40245243 & 0.66873877 \\
+    \textbf{Nodos:Densidad} & 0.009 & 2     & 0.40 & 0.66 \\
     \midrule
-    \textbf{Generador:Nodos} & 0.00915802 & 2     & 0.37891829 & 0.68465657 \\
+    \textbf{Generador:Nodos} & 0.009 & 2     & 0.37 & 0.68 \\
     \midrule
-    \textbf{Residual} & 21.5827752 & 1786  &       &  \\
+    \textbf{Residual} & 21.58 & 1786  &       &  \\
     \bottomrule
     \end{tabular}%
   \label{tab:Cuadro 5}%

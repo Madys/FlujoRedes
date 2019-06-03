@@ -10,11 +10,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from time import time
 from scipy.stats import truncnorm
-from networkx.algorithms.flow import dinitz
 from networkx.algorithms.flow import edmonds_karp
-from networkx.algorithms.flow import boykov_kolmogorov
-import scipy.stats as scipy
-import statistics as stats
 
 def ReadGraph(graph,position):
     ds = pd.read_csv(graph, header=None)
@@ -114,7 +110,7 @@ def AddEdges1(S):
     df=pd.DataFrame(edgs)
     df.to_csv("grafo1_edges.csv", index=None)
 
-def Atributes(G):   
+def Atributes(G,name):   
     dic={}  
     Nodes=G.nodes;
     dic["Nodo"]=Nodes
@@ -126,9 +122,9 @@ def Atributes(G):
     PageR=nx.pagerank(G,weight="capacity")
     dic["PageR"]=[PageR[i] for i in Nodes]
     df=pd.DataFrame(dic)
-    df.to_csv("matrix5.csv", index=None)     
+    df.to_csv(name, index=None)     
   
-def Time(G):
+def Time(G,name):
     dic={"Fuente":[], "Sumidero":[] , "Media":[], "Mediana":[], "Std":[], "MaxFlow":[]}  
     Nodes=G.nodes;
     for i in Nodes:
@@ -144,7 +140,7 @@ def Time(G):
                 dic["Std"].append(np.std(t))
                 dic["MaxFlow"].append(nx.maximum_flow_value(G,i,j,capacity="weight"))
     df=pd.DataFrame(dic)
-    df.to_csv("times5.csv", index=None)    
+    df.to_csv(name, index=None)    
  
     
 def Histogramas():
@@ -167,7 +163,7 @@ def Histogramas():
             car+=1
         cont+=1
         
-def Todo(G):
+def Todo(G,name):
     dic={"Fuente":[],
          "Sumidero":[] , 
          "Media":[],
@@ -201,51 +197,4 @@ def Todo(G):
                 PageR=nx.pagerank(G,weight="capacity")
                 dic["PageR"].append(PageR[i])  
     df=pd.DataFrame(dic)
-    df.to_csv("Todos5.csv", index=None)
-
-
-#matrix=["matrix1.csv","matrix2.csv","matrix3.csv","matrix4.csv","matrix5.csv"]
-#for i in matrix:
-#G,pos=ReadGraph("grafo5.csv","pos5.csv")
-#Todo(G)         
-  
-
-#Histogramas()            
-#G,pos=ReadGraph("grafo5.csv","pos5.csv")
-#R = edmonds_karp(G, 16, 18 ,capacity="weight")
-#PrintRes(R,pos,[3,4], [8,17,1,9],[16,18], "peor5.eps") 
-#PrintRes(R,pos,[2,3], [10,14,2],[17,1], "mejor1.png") 
-#PrintImagez(R,pos)
-
-
-
-#for node in R.edges():    
-#    pesos.append( R.edges[node]['flow']+0.1 )                                                                                                                         
-#PrintGraph(R,pesos)
-
-#pesos=[]
-#for node in R.edges():    
-#    pesos.append( R.edges[node]['flow']+0.1 )                                                                                                                         
-#PrintGraph(R,pesos)                                                                 
-##print(pesos)                                                         
-## 
-#print(s)
-#for (u, v, c) in R.edges.data("flow", default=0):
-#    R.remove_edge(u,v)
-    
-# G.remove_edge(*e) # unpacks e from an edge tuple
-#e = (2, 3, {'weight':7})
-#PrintGraph(G,X)
-
-#PrintImage(R)
-#Time(G)
-#GenerateDic(G)
-
-
-
-
-
-#print(Boyk(G,30,20))
-
-
-
+    df.to_csv(name, index=None)
